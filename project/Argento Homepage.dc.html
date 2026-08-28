@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/broadsheet-cea00db8-b6cf-4aee-9610-f11a9fe25388/styles.css">
+<script src="_ds/broadsheet-cea00db8-b6cf-4aee-9610-f11a9fe25388/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+body{margin:0;background:#e4e2df;font-family:"Source Serif 4",Georgia,serif}
+a{color:var(--color-accent)}
+a:hover{color:var(--color-accent-600)}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#201e1d;color:#f3f2f2;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 "Source Serif 4",serif;color:#201e1d}
+.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#201e1d;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 "Source Serif 4",serif;color:rgba(0,0,0,.6)}
+.dv-card{max-width:100%;background:#f3f2f2;border:1px solid rgba(0,0,0,.1);box-shadow:0 2px 10px rgba(0,0,0,.08);overflow:hidden}
+.dv-opt:target .dv-oid{background:#0088b0;color:#fff}
+.dv-next{margin:22px 0 0;font:13px/1.6 "Source Serif 4",serif;color:rgba(0,0,0,.55)}
+.frame{width:1440px;height:920px;overflow-y:auto;overflow-x:hidden;background:var(--color-bg)}
+.menu-link{display:block;padding:7px 6px;font-size:14.5px;color:var(--color-text);text-decoration:none}
+.menu-link:hover{color:var(--color-accent-700);background:color-mix(in srgb,var(--color-accent) 9%,transparent)}
+.navtrig{font-size:15px;color:var(--color-text);cursor:default;display:inline-flex;gap:6px;align-items:center}
+.navtrig:hover{color:var(--color-accent-700)}
+.kicker{font:600 11px/1 var(--font-heading);letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 55%,transparent)}
+.brand{--color-accent:#4860b0;--color-accent-100:#edeff8;--color-accent-200:#dbe1f2;--color-accent-300:#b6c1e4;--color-accent-500:#4860b0;--color-accent-600:#3d5299;--color-accent-700:#33457f;--color-accent-800:#26325c;--color-accent-2:#e8d200;--color-accent-2-600:#c9b600;--color-accent-2-700:#8f8100;--color-bg:#f4f3f1;--color-surface:#eceae7;--color-text:#171719;--color-divider:rgba(23,23,25,.16);--navy:#101a3a;--signal:#ffe600}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">brand-led refinement — Argento blue, hex lattice imagery, real logo and column photography, 1440×920</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Front page, branded — paper ground, blue lattice, yellow reserved for the quote</div>
+<div class="dv-card">
+<div class="frame brand">
+
+<header style="position:sticky;top:0;z-index:30;background:var(--color-bg);padding:0 64px">
+<div style="display:flex;align-items:center;gap:34px;padding:20px 0 14px;border-bottom:3px solid var(--color-text)">
+<a href="#2a" style="display:block;line-height:0"><img src="assets/argento-logo.png" alt="Argento Scientific" style="height:52px;width:auto;display:block"></a>
+<nav style="display:flex;gap:26px;align-items:center;margin-left:10px">
+<div style="position:relative" onMouseEnter="{{ open2aCols }}" onMouseLeave="{{ close2a }}">
+<span class="navtrig">Chromatography columns <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m2aCols }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:14px;min-width:290px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);border-top:3px solid var(--color-accent);padding:14px 16px;display:flex;flex-direction:column;gap:1px">
+<a class="menu-link" href="#2a">Chromatography columns</a>
+<a class="menu-link" href="#2a">Column swap program</a>
+<a class="menu-link" href="#2a">Column storage &amp; handling</a>
+<a class="menu-link" href="#2a">Column accessories</a>
+<a class="menu-link" href="#2a">Resin &amp; spec library</a>
+<a class="menu-link" href="#2a">Fittings &amp; tubing assemblies <span style="color:var(--color-accent-700)">†</span></a>
+<div style="font-size:11.5px;line-height:1.4;margin-top:10px;padding-top:9px;border-top:1px solid var(--color-divider);color:color-mix(in srgb,var(--color-text) 55%,transparent)">† One page, cross-listed under Solvent safety.</div>
+<button onClick="{{ openQuote }}" style="margin-top:12px;font:600 13px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);border:none;padding:13px 16px;cursor:pointer;text-align:left" style-hover="background:#f2da00">Request a column quote</button>
+</div></div>
+</sc-if>
+</div>
+<div style="position:relative" onMouseEnter="{{ open2aSolv }}" onMouseLeave="{{ close2a }}">
+<span class="navtrig">Solvent safety <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m2aSolv }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:14px;min-width:300px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);border-top:3px solid var(--color-accent);padding:14px 16px;display:flex;flex-direction:column;gap:1px">
+<a class="menu-link" href="#2a">Overflow monitoring &amp; sensors</a>
+<a class="menu-link" href="#2a">Tube &amp; vial caps</a>
+<a class="menu-link" href="#2a">Solvent extraction systems</a>
+<a class="menu-link" href="#2a">Waste collection systems</a>
+<a class="menu-link" href="#2a">Fittings &amp; tubing assemblies <span style="color:var(--color-accent-700)">†</span></a>
+<div style="font-size:11.5px;line-height:1.4;margin-top:10px;padding-top:9px;border-top:1px solid var(--color-divider);color:color-mix(in srgb,var(--color-text) 55%,transparent)">† One page, cross-listed under Chromatography columns.</div>
+</div></div>
+</sc-if>
+</div>
+<div style="position:relative" onMouseEnter="{{ open2aAbout }}" onMouseLeave="{{ close2a }}">
+<span class="navtrig">About <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m2aAbout }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:14px;min-width:230px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);border-top:3px solid var(--color-accent);padding:14px 16px;display:flex;flex-direction:column;gap:1px">
+<a class="menu-link" href="#2a">Company overview</a>
+<a class="menu-link" href="#2a">Contact</a>
+</div></div>
+</sc-if>
+</div>
+</nav>
+<div style="display:flex;gap:12px;align-items:center;margin-left:auto">
+
+
+</div>
+</div>
+<div style="height:1px;background:var(--color-accent);margin-top:3px"></div>
+<div style="display:flex;justify-content:space-between;padding:7px 0 9px" class="kicker">
+
+
+</div>
+</header>
+
+<div style="position:relative;overflow:hidden;background:var(--navy);color:#f4f3f1;min-height:620px;display:grid;grid-template-columns:1fr 500px;gap:44px;align-items:center;padding:60px 64px 58px">
+<div style="position:absolute;inset:0;background:url(assets/hex-lattice-paper.svg) no-repeat center;background-size:cover;opacity:.17"></div>
+<div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--signal)"></div>
+<div style="position:relative">
+<span class="kicker" style="color:var(--signal)">Downstream process development</span>
+<h1 style="font:600 74px/1 var(--font-heading);letter-spacing:-.03em;margin:16px 0 22px;max-width:14em">Stop packing columns.<br>Get back to <span style="font-style:italic">the real science.</span></h1>
+<p style="font-size:20.5px;line-height:1.5;max-width:30em;margin:0 0 14px;color:rgba(244,243,241,.87)">Save time and reduce waste — packed to your resin, your spec, and tested before it ships. Built on Omnifit® glass hardware, so what arrives is ready to run, not ready to re-pack.</p>
+<p style="font-size:17px;line-height:1.5;max-width:30em;margin:0 0 30px;color:rgba(244,243,241,.68)">Packing a column yourself is two to three hours of hands-on work before it is even tested. Send us the spec instead.</p>
+<div style="display:flex;gap:14px;align-items:center">
+<button onClick="{{ openQuote }}" style="font:600 15px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);border:none;padding:16px 24px;cursor:pointer" style-hover="background:#f2da00">Request a column quote</button>
+<a href="#2a" style="font:600 15px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;color:#f4f3f1;border:1px solid rgba(244,243,241,.45);padding:15px 24px;text-decoration:none" style-hover="border-color:#f4f3f1">Column swap program</a>
+</div>
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<p style="margin:24px 0 0;font-size:15px;color:rgba(244,243,241,.66)">Already own the hardware? With the Column Swap Program you only pay to pack.</p>
+</sc-if>
+<div style="display:flex;gap:34px;margin-top:30px;font-size:13.5px;color:rgba(244,243,241,.7)">
+<span>6 bores, 5.0–50.5 mm</span><span>Lengths to 640 mm</span><span>FF / AF / AA endpieces</span><span>EZ &amp; EZ SolventPlus</span>
+</div>
+</div>
+<div style="position:relative;display:flex;justify-content:center;align-items:flex-end;height:530px">
+<img src="assets/columns.png" alt="Packed bench-scale chromatography columns" style="height:530px;width:auto;object-fit:contain;filter:drop-shadow(0 22px 40px rgba(0,0,0,.5))">
+</div>
+</div>
+
+<div style="padding:54px 64px 0">
+<div style="display:flex;align-items:center;gap:30px;border-top:1px solid var(--color-divider);padding-top:24px">
+<sc-if value="{{ proofClaim }}" hint-placeholder-val="{{ false }}">
+<p style="margin:0;font:600 23px/1.3 var(--font-heading);max-width:17em">Trusted by downstream teams at three of the top ten global biopharma companies.</p>
+</sc-if>
+<sc-if value="{{ proofLogos }}" hint-placeholder-val="{{ true }}">
+<span class="kicker" style="max-width:8em;color:var(--color-accent-700)">Used by teams at</span>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1">
+<div style="height:62px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:62px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:62px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:62px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+</div>
+<span class="tag tag-accent-2" style="flex:none">Awaiting Adrian</span>
+</sc-if>
+</div>
+</div>
+
+<div style="padding:58px 64px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:50px">
+<div>
+<div style="height:4px;width:38px;background:var(--color-accent);margin-bottom:14px"></div>
+<span class="kicker">Chromatography columns</span>
+<h3 style="font-size:27px;margin:8px 0 10px">Packed, tested, ready to run</h3>
+<p style="font-size:16px;line-height:1.55;margin:0 0 12px">Omnifit® EZ and EZ SolventPlus glass columns in six bores, with fixed, single- or dual-adjustable endpieces. You send the spec; we pack and test to it.</p>
+<a href="#2a" style="font-size:15px">Chromatography columns →</a>
+</div>
+<div>
+<div style="height:4px;width:38px;background:var(--color-accent);margin-bottom:14px"></div>
+<span class="kicker">Column Swap Program</span>
+<h3 style="font-size:27px;margin:8px 0 10px">One week, fully traceable</h3>
+<p style="font-size:16px;line-height:1.55;margin:0 0 12px">Send us your hardware and we repack it: FIFO resin traceability, lot certification on every pack, packed in the US, back on your bench in about a week.</p>
+<a href="#2a" style="font-size:15px">How the swap works →</a>
+</div>
+<div>
+<div style="height:4px;width:38px;background:var(--signal);margin-bottom:14px"></div>
+<span class="kicker">Column accessories</span>
+<h3 style="font-size:27px;margin:8px 0 10px">Connect it, and protect it in transit</h3>
+<p style="font-size:16px;line-height:1.55;margin:0 0 12px">Tubing connector kits that mate Omnifit® columns to AKTA™ systems without a thread mismatch, and the reusable Shipping Stabilizer Syringe that keeps a packed bed intact on the road.</p>
+<a href="#2a" style="font-size:15px">Shop column accessories →</a>
+</div>
+</div>
+
+<div style="padding:62px 64px 0;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start">
+<div>
+<span class="kicker" style="color:var(--color-accent-700)">Why packed to spec</span>
+<h2 style="font:600 44px/1.05 var(--font-heading);margin:12px 0 16px;max-width:16em">Not all pre-packed columns are created equal.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:33em;margin:0 0 26px">Results vary with resin, operator experience, and technique — and a badly packed column means a re-pack at your expense, on top of the time already lost. We pack to your exact specification and test every column before it ships.</p>
+<div style="display:grid;gap:18px;max-width:34em">
+<div style="display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline"><div style="font:600 15px/1.3 var(--font-heading);color:var(--color-accent-700);border-top:2px solid var(--color-accent);padding-top:8px">Wasted time</div><p style="font-size:15.5px;line-height:1.55;margin:0">Columns arrive ready to use, not waiting on two to three hours of packing and testing.</p></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline"><div style="font:600 15px/1.3 var(--font-heading);color:var(--color-accent-700);border-top:2px solid var(--color-accent);padding-top:8px">Variable results</div><p style="font-size:15.5px;line-height:1.55;margin:0">Packed by experienced technicians to consistent spec, project to project.</p></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline"><div style="font:600 15px/1.3 var(--font-heading);color:var(--color-accent-700);border-top:2px solid var(--color-accent);padding-top:8px">Re-packing risk</div><p style="font-size:15.5px;line-height:1.55;margin:0">Outsourced to us — a bad pack is our problem to fix, not yours.</p></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline"><div style="font:600 15px/1.3 var(--font-heading);color:var(--color-accent-700);border-top:2px solid var(--signal);padding-top:8px">Hardware waste</div><p style="font-size:15.5px;line-height:1.55;margin:0">Reuse what you own through Column Swap instead of buying new hardware every time.</p></div>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--color-surface);padding:28px 30px 30px">
+<div style="position:absolute;inset:0;background:url(assets/hex-screen-tight.svg) no-repeat right -40px bottom -50px;opacity:.22"></div>
+<div style="position:relative">
+<span class="kicker" style="color:var(--color-accent-700)">Omnifit® glass hardware</span>
+<h3 style="font:600 26px/1.15 var(--font-heading);margin:10px 0 14px">Six bores, eleven lengths, three endpiece configurations</h3>
+<p style="font-size:15.5px;line-height:1.6;margin:0 0 20px;max-width:30em">Anti-roll ergonomics, a PTFE inline frit backup, PEEK threads that don't chip or crack. Part numbers follow ASD-[bore]-[length]-[configuration] — several hundred combinations, so the full lookup lives in the filterable spec library.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--color-divider);margin-bottom:18px">
+<div style="background:var(--color-surface);padding:12px 14px 12px 0"><div style="font:600 15.5px/1 var(--font-heading)">FF</div><div style="font-size:14px;line-height:1.45;margin-top:5px">Fixed endpieces — cost-effective standard</div></div>
+<div style="background:var(--color-surface);padding:12px 0 12px 14px"><div style="font:600 15.5px/1 var(--font-heading)">AF</div><div style="font-size:14px;line-height:1.45;margin-top:5px">Single-adjustable — 80 mm of bed control</div></div>
+<div style="background:var(--color-surface);padding:12px 14px 12px 0"><div style="font:600 15.5px/1 var(--font-heading)">AA</div><div style="font-size:14px;line-height:1.45;margin-top:5px">Dual-adjustable — up to 160 mm</div></div>
+<div style="background:var(--color-surface);padding:12px 0 12px 14px"><div style="font:600 15.5px/1 var(--font-heading)">EZS</div><div style="font-size:14px;line-height:1.45;margin-top:5px">SolventPlus — PTFE frits, Chemraz® O-rings, ETFE fittings</div></div>
+</div>
+<p style="font-size:14.5px;line-height:1.55;margin:0 0 18px;color:color-mix(in srgb,var(--color-text) 68%,transparent)">Every column ships with a Frit Kit and a Fittings Kit — spare frits, PTFE tubing with 1/4-28 UNF fittings, and a Click-N-Seal® port fitting.</p>
+<div style="display:flex;gap:12px"><a class="btn btn-primary" href="#2a">Open the spec library</a><button onClick="{{ openQuote }}" class="btn btn-secondary" style="cursor:pointer">Request a quote</button></div>
+</div>
+</div>
+</div>
+
+<div style="margin-top:64px;position:relative;overflow:hidden;background:var(--navy);color:#f4f3f1;padding:46px 64px 50px">
+<div style="position:absolute;inset:0;background:url(assets/hex-lattice-paper.svg) no-repeat left -120px top -80px;opacity:.14"></div>
+<div style="position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start">
+<div>
+<span class="kicker" style="color:var(--signal)">The Column Swap Program</span>
+<h2 style="font:600 44px/1.05 var(--font-heading);margin:12px 0 16px;max-width:19em">Your hardware, our packing bench, back in a week.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:33em;margin:0 0 16px;color:rgba(244,243,241,.85)">Column packing is necessary work that keeps good scientists away from the science. The swap program takes it off your bench without changing your hardware, your resin, or your method.</p>
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<p style="font-size:17px;line-height:1.6;max-width:33em;margin:0 0 24px;color:rgba(244,243,241,.85)"><strong style="color:#fff">Cost framing:</strong> after your initial hardware purchase, you only pay to pack — a number your lab manager can approve without a capital request.</p>
+</sc-if>
+<div style="display:flex;gap:12px">
+<button onClick="{{ openQuote }}" style="font:600 14.5px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);border:none;padding:15px 22px;cursor:pointer" style-hover="background:#f2da00">Start a swap</button>
+<a href="#2a" style="font:600 14.5px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;color:#f4f3f1;border:1px solid rgba(244,243,241,.45);padding:14px 22px;text-decoration:none" style-hover="border-color:#f4f3f1">Download the one-pager</a>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(244,243,241,.22)">
+<div style="background:var(--navy);padding:18px 16px"><div style="font:600 29px/1 var(--font-heading);color:var(--signal)">1 week</div><div style="font-size:13.5px;line-height:1.45;margin-top:8px;color:rgba(244,243,241,.8)">Bench to bench</div></div>
+<div style="background:var(--navy);padding:18px 16px"><div style="font:600 29px/1 var(--font-heading);color:var(--signal)">3–50 mm</div><div style="font-size:13.5px;line-height:1.45;margin-top:8px;color:rgba(244,243,241,.8)">Inner diameters</div></div>
+<div style="background:var(--navy);padding:18px 16px"><div style="font:600 29px/1 var(--font-heading);color:var(--signal)">0–500 mm</div><div style="font-size:13.5px;line-height:1.45;margin-top:8px;color:rgba(244,243,241,.8)">Bed heights</div></div>
+<div style="background:var(--navy);padding:18px 16px"><div style="font:600 29px/1 var(--font-heading);color:var(--signal)">FIFO</div><div style="font-size:13.5px;line-height:1.45;margin-top:8px;color:rgba(244,243,241,.8)">Resin traceability</div></div>
+<div style="background:var(--navy);padding:18px 16px"><div style="font:600 29px/1 var(--font-heading);color:var(--signal)">Certified</div><div style="font-size:13.5px;line-height:1.45;margin-top:8px;color:rgba(244,243,241,.8)">Lot cert, every pack</div></div>
+<div style="background:var(--navy);padding:18px 16px"><div style="font:600 29px/1 var(--font-heading);color:var(--signal)">US</div><div style="font-size:13.5px;line-height:1.45;margin-top:8px;color:rgba(244,243,241,.8)">Packed &amp; shipped</div></div>
+</div>
+</div>
+</div>
+
+<div style="padding:62px 64px 0">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start">
+<div>
+<span class="kicker" style="color:var(--color-accent-700)">Solvent safety</span>
+<h2 style="font:600 44px/1.05 var(--font-heading);margin:12px 0 16px;max-width:17em">The overflow you never see coming.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:33em;margin:0 0 16px">A waste carboy fills quietly, overnight, while nobody is watching the bench. Our solvent safety line closes that gap — monitoring the container, capturing the vapour, and keeping the whole path sealed from column outlet to waste.</p>
+<p style="font-size:16px;line-height:1.6;max-width:33em;margin:0 0 26px;color:color-mix(in srgb,var(--color-text) 68%,transparent)">Polypropylene and PTFE throughout, built for continuous solvent service and specified to fit the fittings you already run.</p>
+<div style="display:flex;gap:14px;align-items:center">
+<a class="btn btn-primary" href="#2a">Explore solvent safety</a>
+<button onClick="{{ openQuote }}" class="btn btn-secondary" style="cursor:pointer">Ask an application question</button>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;background:var(--color-accent-100);padding:28px 30px 30px">
+<div style="position:absolute;inset:0;background:url(assets/hex-screen-tight.svg) no-repeat right -30px top -40px;opacity:.3"></div>
+<div style="position:relative;display:grid;gap:1px;background:var(--color-accent-200)">
+<div style="background:var(--color-accent-100);padding:16px 0">
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font:600 19px/1.2 var(--font-heading)">Overflow monitoring &amp; sensors</span><span class="tag tag-accent-2" style="flex:none">Solvent Sentry™</span></div>
+<p style="font-size:15px;line-height:1.55;margin:6px 0 0;max-width:30em">Float switch, 100 ft wireless bridge, multi-alert relay — someone knows before the carboy does.</p>
+</div>
+<div style="background:var(--color-accent-100);padding:16px 0">
+<div style="font:600 19px/1.2 var(--font-heading)">Solvent extraction systems</div>
+<p style="font-size:15px;line-height:1.55;margin:6px 0 0;max-width:30em">Vapour drawn off at the source, so the fume hood isn't doing work the bench should.</p>
+</div>
+<div style="background:var(--color-accent-100);padding:16px 0">
+<div style="font:600 19px/1.2 var(--font-heading)">Waste collection systems</div>
+<p style="font-size:15px;line-height:1.55;margin:6px 0 0;max-width:30em">Closed carboy assemblies with vented caps, quick-connects and level indication.</p>
+</div>
+<div style="background:var(--color-accent-100);padding:16px 0">
+<div style="font:600 19px/1.2 var(--font-heading)">Tube &amp; vial caps · fittings &amp; tubing</div>
+<p style="font-size:15px;line-height:1.55;margin:6px 0 0;max-width:30em">The small parts that decide whether a system is actually sealed — matched to your ports.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<footer style="margin-top:72px;position:relative;overflow:hidden;background:var(--navy);color:#f4f3f1;padding:40px 64px 34px">
+<div style="position:absolute;inset:0;background:url(assets/hex-screen-tight.svg) no-repeat right -40px bottom -60px;opacity:.13"></div>
+<div style="position:relative;display:flex;gap:60px;align-items:flex-start">
+<div style="max-width:22em">
+<div style="font:600 19px/1 var(--font-heading);margin-bottom:10px">Argento Scientific</div>
+<p style="font-size:14px;line-height:1.6;margin:0;color:rgba(244,243,241,.75)">Bench-scale column hardware, column packing, solvent waste safety and accessories.</p>
+<div style="font-size:13.5px;line-height:1.7;margin-top:14px;color:rgba(244,243,241,.6)">100 Cummings Center, Suite 451-C<br>Beverly, MA 01915</div>
+</div>
+<div style="display:flex;gap:52px;margin-left:auto;font-size:14px;line-height:2">
+<div><div class="kicker" style="color:var(--signal);margin-bottom:6px">Chromatography columns</div><a href="#2a" style="display:block;color:#f4f3f1">Chromatography columns</a><a href="#2a" style="display:block;color:#f4f3f1">Column swap program</a><a href="#2a" style="display:block;color:#f4f3f1">Column storage &amp; handling</a><a href="#2a" style="display:block;color:#f4f3f1">Column accessories</a><a href="#2a" style="display:block;color:#f4f3f1">Resin &amp; spec library</a><a href="#2a" style="display:block;color:#f4f3f1">Fittings &amp; tubing assemblies †</a></div>
+<div><div class="kicker" style="color:var(--signal);margin-bottom:6px">Solvent safety</div><a href="#2a" style="display:block;color:#f4f3f1">Overflow monitoring &amp; sensors</a><a href="#2a" style="display:block;color:#f4f3f1">Tube &amp; vial caps</a><a href="#2a" style="display:block;color:#f4f3f1">Solvent extraction systems</a><a href="#2a" style="display:block;color:#f4f3f1">Waste collection systems</a><a href="#2a" style="display:block;color:#f4f3f1">Fittings &amp; tubing assemblies †</a></div>
+<div><div class="kicker" style="color:var(--signal);margin-bottom:6px">About</div><a href="#2a" style="display:block;color:#f4f3f1">Company overview</a><a href="#2a" style="display:block;color:#f4f3f1">Contact</a><div style="font-size:12px;line-height:1.5;margin-top:12px;max-width:14em;color:rgba(244,243,241,.55)">† One page, cross-listed in both sections.</div></div>
+</div>
+</div>
+<div style="position:relative;margin-top:26px;font-size:12.5px;color:rgba(244,243,241,.5)">© 2026 Argento Scientific. All rights reserved.</div>
+</footer>
+
+<sc-if value="{{ stickyQuoteBar }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;bottom:0;background:var(--color-bg);border-top:3px solid var(--color-text);padding:13px 64px;display:flex;align-items:center;gap:20px">
+<span style="font:600 16.5px/1.2 var(--font-heading)">Ready-to-run columns, packed to your spec in about a week.</span>
+<button onClick="{{ openQuote }}" style="margin-left:auto;font:600 13.5px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);border:none;padding:13px 20px;cursor:pointer" style-hover="background:#f2da00">Request a column quote</button>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ quoteOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:60;background:rgba(16,26,58,.62);display:grid;place-items:center;padding:40px" onClick="{{ closeQuote }}">
+<div onClick="{{ stopClick }}" style="position:relative;width:660px;max-width:100%;max-height:100%;overflow:auto;background:var(--color-bg);box-shadow:var(--shadow-lg);border-top:5px solid var(--signal)">
+<div style="display:flex;align-items:flex-start;gap:20px;padding:26px 30px 0">
+<div>
+<span class="kicker" style="color:var(--color-accent-700)">Custom column quote</span>
+<h3 style="font:600 30px/1.1 var(--font-heading);margin:8px 0 8px">Tell us the column you need.</h3>
+</div>
+<button onClick="{{ closeQuote }}" aria-label="Close" style="margin-left:auto;background:none;border:1px solid var(--color-divider);width:36px;height:36px;font-size:17px;cursor:pointer;color:var(--color-text)" style-hover="border-color:var(--color-text)">✕</button>
+</div>
+<sc-if value="{{ quoteSent }}" hint-placeholder-val="{{ false }}">
+<div style="padding:6px 30px 32px">
+<p style="font-size:17px;line-height:1.6;margin:0 0 18px;max-width:32em">Thanks — that's with us. You'll have a quote within one business day, from the people who pack the column.</p>
+<button onClick="{{ closeQuote }}" class="btn btn-secondary" style="cursor:pointer">Close</button>
+</div>
+</sc-if>
+<sc-if value="{{ quoteUnsent }}" hint-placeholder-val="{{ true }}">
+<div style="padding:0 30px 30px">
+<p style="font-size:16px;line-height:1.6;margin:0 0 20px;max-width:34em;color:color-mix(in srgb,var(--color-text) 70%,transparent)">Resin, bore and length is usually enough. One business day to a quote — a quote request, not a cart.</p>
+<form onSubmit="{{ submitQuote }}" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="field"><label>Name</label><input class="input" placeholder="Dana Okafor"></div>
+<div class="field"><label>Work email</label><input class="input" type="email" placeholder="dana@company.com"></div>
+<div class="field"><label>Resin</label><input class="input" placeholder="e.g. MabSelect PrismA"></div>
+<div class="field"><label>Bore × length</label><input class="input" placeholder="10.0 mm × 150 mm"></div>
+<div class="field"><label>Endpieces</label><select class="input"><option>FF — fixed</option><option selected="selected">AF — single-adjustable</option><option>AA — dual-adjustable</option></select></div>
+<div class="field"><label>Column line</label><select class="input"><option>EZ</option><option>EZ SolventPlus</option></select></div>
+<div class="field" style="grid-column:1/-1"><label>Anything else we should know</label><textarea class="input" placeholder="Method, deadline, whether you already own the hardware"></textarea></div>
+<button type="submit" style="grid-column:1/-1;justify-self:start;font:600 15px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);border:none;padding:16px 24px;cursor:pointer" style-hover="background:#f2da00">Request a quote</button>
+</form>
+</div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Deep plate — full-bleed navy hero, hex screen imagery, columns cut out of the field</div>
+<div class="dv-card">
+<div class="frame brand">
+
+<header style="position:sticky;top:0;z-index:30;background:var(--color-bg);padding:0 60px;box-shadow:0 1px 0 var(--color-divider)">
+<div style="display:flex;align-items:center;gap:30px;padding:16px 0">
+<a href="#2b" style="display:block;line-height:0"><img src="assets/argento-logo.png" alt="Argento Scientific" style="height:46px;width:auto;display:block"></a>
+<nav style="display:flex;gap:24px;align-items:center;margin-left:auto">
+<div style="position:relative" onMouseEnter="{{ open2bCols }}" onMouseLeave="{{ close2b }}">
+<span class="navtrig">Chromatography columns <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m2bCols }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:12px;min-width:300px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);border-top:3px solid var(--color-accent);padding:14px 16px">
+<div class="kicker" style="margin-bottom:8px;color:var(--color-accent-700)">For the bench</div>
+<a class="menu-link" href="#2b">Columns overview</a>
+<a class="menu-link" href="#2b">Column Swap Program</a>
+<div class="kicker" style="margin:12px 0 8px;color:var(--color-accent-700)">For the spec sheet</div>
+<a class="menu-link" href="#2b">Bed height &amp; volume table</a>
+<a class="menu-link" href="#2b">Resin coverage</a>
+</div></div>
+</sc-if>
+</div>
+<div style="position:relative" onMouseEnter="{{ open2bSolv }}" onMouseLeave="{{ close2b }}">
+<span class="navtrig">Solvent Safety <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m2bSolv }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:12px;min-width:300px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);border-top:3px solid var(--color-accent);padding:14px 16px">
+<a class="menu-link" href="#2b">Solvent Sentry™</a>
+<a class="menu-link" href="#2b">Emissions control</a>
+<a class="menu-link" href="#2b">Waste collection &amp; closed systems</a>
+</div></div>
+</sc-if>
+</div>
+<a href="#2b" style="font-size:15px;color:var(--color-text);text-decoration:none">About</a>
+<a href="#2b-quote" style="font:600 14px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);padding:13px 19px;text-decoration:none" style-hover="background:#f2da00">Request a column quote</a>
+</nav>
+</div>
+</header>
+
+<div style="position:relative;overflow:hidden;background:var(--navy);color:#f4f3f1;min-height:600px;display:grid;grid-template-columns:1fr 520px;gap:40px;align-items:center;padding:60px 60px 56px">
+<div style="position:absolute;inset:0;background:url(assets/hex-lattice-paper.svg) no-repeat center;background-size:cover;opacity:.17"></div>
+<div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--signal)"></div>
+<div style="position:relative">
+<span class="kicker" style="color:var(--signal)">Bench-scale columns · Packing · Solvent safety</span>
+<h1 style="font:600 72px/1 var(--font-heading);letter-spacing:-.03em;margin:16px 0 22px;max-width:15em">Stop packing columns.<br>Get back to <span style="font-style:italic">the real science.</span></h1>
+<p style="font-size:20px;line-height:1.5;max-width:30em;margin:0 0 28px;color:rgba(244,243,241,.86)">Columns built and packed to your exact specification — your resin, your bed height, your diameter — tested, lot-certified and on your bench in about a week.</p>
+<div style="display:flex;gap:14px;align-items:center">
+<a href="#2b-quote" style="font:600 15px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);padding:16px 24px;text-decoration:none" style-hover="background:#f2da00">Request a column quote</a>
+<a href="#2b" style="font:600 15px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;color:#f4f3f1;border:1px solid rgba(244,243,241,.45);padding:15px 24px;text-decoration:none" style-hover="border-color:#f4f3f1">Solvent Sentry™</a>
+</div>
+<div style="display:flex;gap:34px;margin-top:36px;font-size:13.5px;color:rgba(244,243,241,.72)">
+<span>3–50 mm i.d.</span><span>0–500 mm beds</span><span>30+ resins</span><span>Packed in the US</span>
+</div>
+</div>
+<div style="position:relative;display:flex;justify-content:center;align-items:flex-end;height:520px">
+<img src="assets/columns.png" alt="Packed bench-scale chromatography columns" style="height:520px;width:auto;object-fit:contain;filter:drop-shadow(0 22px 40px rgba(0,0,0,.5))">
+</div>
+</div>
+
+<div style="padding:34px 60px 0">
+<div style="display:flex;align-items:center;gap:26px">
+<sc-if value="{{ proofClaim }}" hint-placeholder-val="{{ false }}">
+<p style="margin:0;font:600 21px/1.3 var(--font-heading);max-width:18em">Trusted by downstream teams at three of the top ten global biopharma companies.</p>
+</sc-if>
+<sc-if value="{{ proofLogos }}" hint-placeholder-val="{{ true }}">
+<span class="kicker" style="max-width:9em;color:var(--color-accent-700)">Word of mouth, from teams at</span>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;flex:1">
+<div style="height:54px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:54px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:54px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:54px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:54px;display:grid;place-items:center;background:var(--color-accent-100);color:var(--color-accent-700);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+</div>
+<span class="tag tag-accent-2" style="flex:none">Awaiting Adrian</span>
+</sc-if>
+</div>
+</div>
+
+<div style="padding:52px 60px 0;display:grid;grid-template-columns:1fr 1fr;gap:44px">
+<div style="position:relative;overflow:hidden;padding:30px 30px 34px;background:var(--color-accent-100)">
+<div style="position:absolute;inset:0;background:url(assets/hex-screen-tight.svg) no-repeat right -30px top -40px;opacity:.35"></div>
+<div style="position:relative">
+<span class="kicker" style="color:var(--color-accent-700)">Chromatography columns</span>
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:10px 0 12px">Ready-to-run, tested, in about a week</h2>
+<p style="font-size:16.5px;line-height:1.6;margin:0 0 18px;max-width:26em">3–50 mm diameters, bed heights to 500 mm, 30+ resins packed routinely, FIFO traceability and lot certification on every column.</p>
+<div style="display:flex;gap:12px"><a class="btn btn-primary" href="#2b-quote">Request a quote</a><a class="btn btn-secondary" href="#2b">Columns overview</a></div>
+</div>
+</div>
+<div style="position:relative;overflow:hidden;padding:30px 30px 34px;background:var(--color-surface)">
+<div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--signal)"></div>
+<span class="kicker">Solvent Safety</span>
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:10px 0 12px">Know the carboy is full before it overflows</h2>
+<p style="font-size:16.5px;line-height:1.6;margin:0 0 18px;max-width:26em">Solvent Sentry™ pairs a float switch with a 100 ft wireless bridge and a multi-alert system, in polypropylene built for solvent service.</p>
+<div style="display:flex;gap:12px"><a class="btn btn-primary" href="#2b">Solvent Sentry™</a><a class="btn btn-secondary" href="#2b">Safety systems</a></div>
+</div>
+</div>
+
+<div style="padding:56px 60px 0;display:grid;grid-template-columns:1fr 380px;gap:50px;align-items:start">
+<div>
+<span class="kicker" style="color:var(--color-accent-700)">Column Swap Program</span>
+<h2 style="font:600 40px/1.06 var(--font-heading);margin:10px 0 14px;max-width:19em">Send the hardware you already own. Get it back packed.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:35em">No new hardware, no method change. We repack your columns with full FIFO resin traceability and lot certification, in the US, and ship them back in about a week.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:28px 0 22px">
+<div><div style="font:600 15px/1 var(--font-heading);color:var(--color-accent-700)">01</div><div style="height:2px;background:var(--color-accent);margin:8px 0 10px"></div><div style="font-size:15.5px;line-height:1.55">Tell us your resin, diameter and bed height.</div></div>
+<div><div style="font:600 15px/1 var(--font-heading);color:var(--color-accent-700)">02</div><div style="height:2px;background:var(--color-accent);margin:8px 0 10px"></div><div style="font-size:15.5px;line-height:1.55">Ship us the hardware — we send the label.</div></div>
+<div><div style="font:600 15px/1 var(--font-heading);color:var(--color-accent-700)">03</div><div style="height:2px;background:var(--signal);margin:8px 0 10px"></div><div style="font-size:15.5px;line-height:1.55">It comes back packed, tested and certified.</div></div>
+</div>
+<div style="display:flex;gap:12px"><a class="btn btn-primary" href="#2b">See the Column Swap Program</a><a class="btn btn-secondary" href="#2b">Download the one-pager</a></div>
+</div>
+<div>
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<div style="background:var(--navy);color:#f4f3f1;padding:22px 24px;margin-bottom:2px">
+<div class="kicker" style="color:var(--signal)">Cost framing</div>
+<p style="margin:10px 0 0;font-size:16.5px;line-height:1.5">After the initial hardware purchase, <strong style="color:var(--signal)">you only pay to pack</strong> — an operating cost your lab manager can approve without a capital request.</p>
+</div>
+</sc-if>
+<div style="display:flex;flex-direction:column;gap:1px;background:var(--color-divider)">
+<div style="background:var(--color-bg);padding:15px 22px;font-size:15.5px">1-week typical turnaround</div>
+<div style="background:var(--color-bg);padding:15px 22px;font-size:15.5px">3–50 mm inner diameters</div>
+<div style="background:var(--color-bg);padding:15px 22px;font-size:15.5px">0–500 mm bed heights</div>
+<div style="background:var(--color-bg);padding:15px 22px;font-size:15.5px">FIFO resin traceability</div>
+<div style="background:var(--color-bg);padding:15px 22px;font-size:15.5px">Lot certification, every pack</div>
+<div style="background:var(--color-bg);padding:15px 22px;font-size:15.5px">Packed in the US</div>
+</div>
+</div>
+</div>
+
+<div style="padding:56px 60px 0">
+<div style="display:flex;align-items:baseline;gap:16px;margin-bottom:16px">
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:0">Bed height &amp; volume, in HTML</h2>
+<span class="kicker" style="color:var(--color-accent-700)">7 diameters · millilitres</span>
+</div>
+<table class="table" style="font-size:14.5px">
+<thead><tr><th>Bed height</th><th>3 mm</th><th>5 mm</th><th>10 mm</th><th>15 mm</th><th>25 mm</th><th>35 mm</th><th>50 mm</th></tr></thead>
+<tbody>
+<sc-for list="{{ specRows }}" as="r" hint-placeholder-count="6">
+<tr><td style="font-weight:600">{{ r.h }}</td><td>{{ r.v3 }}</td><td>{{ r.v5 }}</td><td>{{ r.v10 }}</td><td>{{ r.v15 }}</td><td>{{ r.v25 }}</td><td>{{ r.v35 }}</td><td>{{ r.v50 }}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div id="2b-quote" style="margin-top:60px;position:relative;overflow:hidden;background:var(--navy);color:#f4f3f1;padding:48px 60px 52px">
+<div style="position:absolute;inset:0;background:url(assets/hex-lattice-paper.svg) no-repeat right -200px center;opacity:.13"></div>
+<div style="position:relative;display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start">
+<div>
+<h2 style="font:600 38px/1.06 var(--font-heading);margin:0 0 14px;max-width:15em">Tell us the column you need.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:30em;color:rgba(244,243,241,.85)">Resin, diameter, bed height. One business day to a quote, from the people who pack it — or ask about Solvent Sentry™ and we'll route it.</p>
+</div>
+<sc-if value="{{ sent2b }}" hint-placeholder-val="{{ false }}">
+<div style="border-top:3px solid var(--signal);background:rgba(244,243,241,.08);padding:30px">
+<h3 style="margin:0 0 8px">Got it — thank you.</h3>
+<p style="font-size:16px;margin:0;color:rgba(244,243,241,.85)">We'll be back within one business day with a quote and a lead time.</p>
+</div>
+</sc-if>
+<sc-if value="{{ unsent2b }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit2b }}" style="background:var(--color-bg);color:var(--color-text);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="field" style="grid-column:1/-1"><label>What are you asking about</label>
+<div class="seg" style="width:100%">
+<label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="d-line" defaultChecked="{{ true }}">Columns</label>
+<label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="d-line">Solvent Safety</label>
+</div></div>
+<div class="field"><label>Name</label><input class="input" placeholder="Dana Okafor"></div>
+<div class="field"><label>Work email</label><input class="input" type="email" placeholder="dana@company.com"></div>
+<div class="field"><label>Resin</label><input class="input" placeholder="e.g. Capto Q"></div>
+<div class="field"><label>Column i.d. × bed height</label><input class="input" placeholder="10 mm × 250 mm"></div>
+<div class="field" style="grid-column:1/-1"><label>Notes</label><textarea class="input" placeholder="Timeline, whether you own the hardware, anything unusual"></textarea></div>
+<button type="submit" style="grid-column:1/-1;font:600 15px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);border:none;padding:16px 24px;cursor:pointer" style-hover="background:#f2da00">Send it</button>
+</form>
+</sc-if>
+</div>
+</div>
+
+<footer style="padding:34px 60px 34px;display:flex;gap:60px;align-items:flex-start">
+<div style="max-width:22em">
+<img src="assets/argento-logo.png" alt="Argento Scientific" style="height:40px;width:auto;display:block;margin-bottom:12px">
+<p style="font-size:14px;line-height:1.6;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent)">Columns, packing, solvent waste safety and accessories for downstream process development.</p>
+<div style="font-size:13.5px;line-height:1.7;margin-top:12px;color:color-mix(in srgb,var(--color-text) 60%,transparent)">100 Cummings Center, Suite 451-C<br>Beverly, MA 01915</div>
+</div>
+<div style="display:flex;gap:52px;margin-left:auto;font-size:14px;line-height:2">
+<div><div class="kicker" style="margin-bottom:6px;color:var(--color-accent-700)">Columns</div><a href="#2b" style="display:block">Overview</a><a href="#2b" style="display:block">Column Swap</a><a href="#2b" style="display:block">Spec table</a></div>
+<div><div class="kicker" style="margin-bottom:6px;color:var(--color-accent-700)">Solvent Safety</div><a href="#2b" style="display:block">Solvent Sentry™</a><a href="#2b" style="display:block">Accessories</a></div>
+<div><div class="kicker" style="margin-bottom:6px;color:var(--color-accent-700)">Company</div><a href="#2b" style="display:block">About</a><a href="#2b" style="display:block">Contact</a></div>
+</div>
+</footer>
+<div style="padding:0 60px 28px;font-size:12.5px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">© 2026 Argento Scientific. All rights reserved.</div>
+
+<sc-if value="{{ stickyQuoteBar }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;bottom:0;background:var(--navy);color:#f4f3f1;padding:13px 60px;display:flex;align-items:center;gap:18px">
+<span style="font-size:15.5px">Diameter, bed height, resin — that's all a quote needs.</span>
+<a href="#2b-quote" style="margin-left:auto;font:600 13.5px/1 var(--font-heading);letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--color-text);padding:13px 20px;text-decoration:none" style-hover="background:#f2da00">Request a column quote</a>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "put <a class="dv-oid" href="#2b">2b</a>'s navy hero on <a class="dv-oid" href="#2a">2a</a>" · "dial the hex lattice up / down" · "add the mobile view"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">argentoscientific.com homepage — three directions, desktop, 1440×920 scrolling frames</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>The front page — editorial, trust-first, plate headline</div>
+<div class="dv-card">
+<div class="frame">
+
+<header style="position:sticky;top:0;z-index:30;background:var(--color-bg);padding:0 64px">
+<div style="display:flex;align-items:center;gap:30px;padding:18px 0 13px;border-bottom:3px solid var(--color-text)">
+<a href="#1a" style="font:600 23px/1 var(--font-heading);letter-spacing:-.02em;color:var(--color-text);text-decoration:none">Argento Scientific</a>
+<nav style="display:flex;gap:24px;align-items:center;margin-left:14px">
+<div style="position:relative" onMouseEnter="{{ open1aCols }}" onMouseLeave="{{ close1a }}">
+<span class="navtrig">Chromatography columns <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m1aCols }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:14px;min-width:280px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);padding:12px 14px;display:flex;flex-direction:column;gap:1px">
+<a class="menu-link" href="#1a">Columns overview</a>
+<a class="menu-link" href="#1a">Column Swap Program</a>
+<a class="menu-link" href="#1a">Bed height &amp; volume table</a>
+<a class="menu-link" href="#1a">Resin coverage</a>
+</div></div>
+</sc-if>
+</div>
+<div style="position:relative" onMouseEnter="{{ open1aSolv }}" onMouseLeave="{{ close1a }}">
+<span class="navtrig">Solvent Safety <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m1aSolv }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:14px;min-width:280px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);padding:12px 14px;display:flex;flex-direction:column;gap:1px">
+<a class="menu-link" href="#1a">Solvent Sentry™</a>
+<a class="menu-link" href="#1a">Waste collection &amp; closed systems</a>
+<span style="display:block;padding:8px 6px 2px;font-size:11.5px;color:color-mix(in srgb,var(--color-text) 50%,transparent)">Safety systems page pending buyer-persona confirmation</span>
+</div></div>
+</sc-if>
+</div>
+<a href="#1a" style="font-size:15px;color:var(--color-text);text-decoration:none">About</a>
+</nav>
+<div style="display:flex;gap:12px;align-items:center;margin-left:auto">
+<a class="btn btn-ghost" href="#1a">Learn about Solvent Sentry™</a>
+<a class="btn btn-primary" href="#1a-quote">Request a column quote</a>
+</div>
+</div>
+<div style="height:1px;background:color-mix(in srgb,var(--color-text) 45%,transparent);margin-top:3px"></div>
+<div style="display:flex;justify-content:space-between;padding:7px 0 9px" class="kicker">
+<span>Bench-scale column hardware · Column packing · Solvent waste safety</span>
+<span>Packed in the US · Typically shipped in one week</span>
+</div>
+</header>
+
+<div style="padding:60px 64px 0;display:grid;grid-template-columns:1fr 470px;gap:60px;align-items:start">
+<div>
+<h1 style="font:600 78px/0.98 var(--font-heading);letter-spacing:-.03em;margin:0 0 26px;max-width:14em">
+<span class="cmyk-head" style="display:block"><span class="paper">Stop packing</span><span class="plate plate-c" aria-hidden="true">Stop packing</span><span class="plate plate-m" aria-hidden="true">Stop packing</span><span class="plate plate-y" aria-hidden="true">Stop packing</span></span>
+<span class="cmyk-head" style="display:block"><span class="paper">columns. Get back</span><span class="plate plate-c" aria-hidden="true">columns. Get back</span><span class="plate plate-m" aria-hidden="true">columns. Get back</span><span class="plate plate-y" aria-hidden="true">columns. Get back</span></span>
+<span class="cmyk-head" style="display:block"><span class="paper">to the real science.</span><span class="plate plate-c" aria-hidden="true">to the real science.</span><span class="plate plate-m" aria-hidden="true">to the real science.</span><span class="plate plate-y" aria-hidden="true">to the real science.</span></span>
+</h1>
+<p style="font-size:21px;line-height:1.5;max-width:30em;margin:0 0 10px">We build bench-scale chromatography columns to your exact specification — your resin, your bed height, your diameter — and pack them so they arrive tested and ready to run.</p>
+<p style="font-size:18px;line-height:1.5;max-width:30em;margin:0 0 28px;font-style:italic;color:var(--color-accent-700)">Custom-built to exact specifications, shipped in days.</p>
+<div style="display:flex;gap:14px;align-items:center">
+<a class="btn btn-primary" href="#1a-quote" style="font-size:16px;padding:13px 22px">Request a column quote</a>
+<a class="btn btn-secondary" href="#1a" style="font-size:16px;padding:13px 22px">See the spec table</a>
+</div>
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<p style="margin:20px 0 0;font-size:15px;color:color-mix(in srgb,var(--color-text) 65%,transparent)">Already own the hardware? With the Column Swap Program you only pay to pack.</p>
+</sc-if>
+</div>
+<div style="width:470px">
+<figure class="cmyk">
+<div class="print" style="aspect-ratio:4/5;filter:none">
+<image-slot id="a-hero" shape="rect" placeholder="Packed column on the bench — vertical crop"></image-slot>
+</div>
+</figure>
+<figcaption style="font-size:12px;margin-top:6px">A 25 mm i.d. column packed with MabSelect PrismA, lot-certified and ready to run.</figcaption>
+</div>
+</div>
+
+<div style="padding:52px 64px 0">
+<div style="height:1px;background:var(--color-divider)"></div>
+<div style="display:flex;align-items:center;gap:44px;padding:26px 0 0">
+<sc-if value="{{ proofClaim }}" hint-placeholder-val="{{ false }}">
+<p style="margin:0;font:600 24px/1.3 var(--font-heading);max-width:16em">Trusted by downstream teams at three of the top ten global biopharma companies.</p>
+</sc-if>
+<sc-if value="{{ proofLogos }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;align-items:center;gap:22px;flex:1">
+<span class="kicker" style="max-width:8em">Used by teams at</span>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1">
+<div style="height:64px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:64px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:64px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:64px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11.5px;text-align:center;padding:6px">Logo — pending approval</div>
+</div>
+<span class="tag tag-accent-2" style="flex:none">Awaiting Adrian</span>
+</div>
+</sc-if>
+</div>
+</div>
+
+<div style="padding:64px 64px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:52px">
+<div>
+<span class="kicker">Columns</span>
+<h3 style="font-size:27px;margin:8px 0 10px">Packed, tested, ready to run</h3>
+<p style="font-size:16px;line-height:1.55;margin:0 0 12px">Diameters from 3 to 50 mm, bed heights to 500 mm, and more than thirty resins we pack routinely. You send the parameters; we send back a column that matches them.</p>
+<a href="#1a" style="font-size:15px">Columns overview →</a>
+</div>
+<div>
+<span class="kicker">Column Swap Program</span>
+<h3 style="font-size:27px;margin:8px 0 10px">One week, fully traceable</h3>
+<p style="font-size:16px;line-height:1.55;margin:0 0 12px">Send us your hardware and we repack it: FIFO resin traceability, lot certification on every pack, packed in the US, back on your bench in about a week.</p>
+<a href="#1a" style="font-size:15px">How the swap works →</a>
+</div>
+<div>
+<span class="kicker">Solvent Safety</span>
+<h3 style="font-size:27px;margin:8px 0 10px">Catch the spill before it starts</h3>
+<p style="font-size:16px;line-height:1.55;margin:0 0 12px">Solvent Sentry™ watches your waste carboy with a float switch and a 100 ft wireless bridge, so the alert reaches someone before the container overflows.</p>
+<a href="#1a" style="font-size:15px">Solvent Sentry™ →</a>
+</div>
+</div>
+
+<div style="padding:64px 64px 0">
+<div style="height:3px;background:var(--color-text)"></div>
+<div style="display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:34px 0 0">
+<div>
+<span class="kicker" style="color:var(--color-accent-700)">The Column Swap Program</span>
+<h2 style="font:600 44px/1.05 var(--font-heading);margin:10px 0 16px;max-width:20em">Your hardware, our packing bench, back in a week.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:34em;margin:0 0 18px">Column packing is necessary work that keeps good scientists away from the science. The swap program takes it off your bench without changing your hardware, your resin, or your method.</p>
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<p style="font-size:17px;line-height:1.6;max-width:34em;margin:0 0 22px"><strong>Cost framing:</strong> after your initial hardware purchase, you only pay to pack — a number your lab manager can approve without a capital request.</p>
+</sc-if>
+<div style="display:flex;gap:12px">
+<a class="btn btn-primary" href="#1a-quote">Start a swap</a>
+<a class="btn btn-secondary" href="#1a">Download the one-pager (PDF)</a>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-divider)">
+<div style="background:var(--color-bg);padding:20px 18px"><div style="font:600 30px/1 var(--font-heading);color:var(--color-accent-700)">1 week</div><div style="font-size:14px;margin-top:6px">Typical turnaround, bench to bench</div></div>
+<div style="background:var(--color-bg);padding:20px 18px"><div style="font:600 30px/1 var(--font-heading);color:var(--color-accent-700)">3–50 mm</div><div style="font-size:14px;margin-top:6px">Column inner diameters packed</div></div>
+<div style="background:var(--color-bg);padding:20px 18px"><div style="font:600 30px/1 var(--font-heading);color:var(--color-accent-700)">0–500 mm</div><div style="font-size:14px;margin-top:6px">Bed heights supported</div></div>
+<div style="background:var(--color-bg);padding:20px 18px"><div style="font:600 30px/1 var(--font-heading);color:var(--color-accent-700)">FIFO</div><div style="font-size:14px;margin-top:6px">Resin traceability, oldest lot first</div></div>
+<div style="background:var(--color-bg);padding:20px 18px"><div style="font:600 30px/1 var(--font-heading);color:var(--color-accent-700)">Certified</div><div style="font-size:14px;margin-top:6px">Lot certification with every pack</div></div>
+<div style="background:var(--color-bg);padding:20px 18px"><div style="font:600 30px/1 var(--font-heading);color:var(--color-accent-700)">US</div><div style="font-size:14px;margin-top:6px">Packed and shipped domestically</div></div>
+</div>
+</div>
+</div>
+
+<div style="padding:64px 64px 0">
+<div style="display:flex;align-items:baseline;gap:16px;margin-bottom:6px">
+<h2 style="font:600 36px/1.1 var(--font-heading);margin:0">Bed height &amp; volume</h2>
+<span class="kicker">Live HTML — searchable, no longer a screenshot</span>
+</div>
+<p style="font-size:16px;max-width:46em;margin:0 0 18px">Column volume in millilitres for every diameter and bed height we pack. Ask for a combination that isn't listed and we will quote it.</p>
+<table class="table" style="font-size:14.5px">
+<thead><tr><th>Bed height</th><th>3 mm</th><th>5 mm</th><th>10 mm</th><th>15 mm</th><th>25 mm</th><th>35 mm</th><th>50 mm</th></tr></thead>
+<tbody>
+<sc-for list="{{ specRows }}" as="r" hint-placeholder-count="6">
+<tr><td style="font-weight:600">{{ r.h }}</td><td>{{ r.v3 }}</td><td>{{ r.v5 }}</td><td>{{ r.v10 }}</td><td>{{ r.v15 }}</td><td>{{ r.v25 }}</td><td>{{ r.v35 }}</td><td>{{ r.v50 }}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div style="padding:60px 64px 0;display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start">
+<div>
+<div style="display:flex;align-items:baseline;gap:16px">
+<h2 style="font:600 36px/1.1 var(--font-heading);margin:0 0 8px">Resins we pack</h2>
+<span class="kicker">Partial list · 30+ resins</span>
+</div>
+<p style="font-size:16px;max-width:44em;margin:0 0 20px">Grouped by chemistry, from Cytiva, Tosoh, Bio-Rad, Thermo Fisher and Merck KGaA. If your resin isn't here, ask — the list is longer than the page.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px">
+<div><div class="kicker" style="color:var(--color-accent-700)">Protein A</div><ul style="margin:8px 0 0;padding-left:1.1em;font-size:15px;line-height:1.7"><li>MabSelect PrismA</li><li>MabSelect SuRe LX</li><li>MabSelect</li></ul></div>
+<div><div class="kicker" style="color:var(--color-accent-700)">Ion exchange</div><ul style="margin:8px 0 0;padding-left:1.1em;font-size:15px;line-height:1.7"><li>Capto Q</li><li>Fractogel TMAE</li><li>Toyopearl GigaCap Q</li></ul></div>
+<div><div class="kicker" style="color:var(--color-accent-700)">Hydrophobic interaction</div><ul style="margin:8px 0 0;padding-left:1.1em;font-size:15px;line-height:1.7"><li>Toyopearl Phenyl-650</li><li>Toyopearl Butyl-600</li><li>Capto Phenyl</li></ul></div>
+<div><div class="kicker" style="color:var(--color-accent-700)">Size exclusion</div><ul style="margin:8px 0 0;padding-left:1.1em;font-size:15px;line-height:1.7"><li>Superdex 200</li><li>Sephacryl S-400</li></ul></div>
+<div><div class="kicker" style="color:var(--color-accent-700)">Affinity — AAV</div><ul style="margin:8px 0 0;padding-left:1.1em;font-size:15px;line-height:1.7"><li>POROS AAV9</li><li>POROS AAVX</li></ul></div>
+<div><div class="kicker" style="color:var(--color-accent-700)">Mixed mode</div><ul style="margin:8px 0 0;padding-left:1.1em;font-size:15px;line-height:1.7"><li>Capto MMC</li><li>Toyopearl MX-Trp-650M</li></ul></div>
+</div>
+</div>
+<div class="card" style="padding:20px">
+<span class="card-kicker">Forward this internally</span>
+<div class="card-title" style="font-size:19px">Column line one-pager</div>
+<p class="card-body" style="font-size:14px">Two pages: what we pack, turnaround, traceability, and the swap program. Written to be sent to a lab manager without editing.</p>
+<a class="btn btn-primary btn-block" href="#1a">Download PDF (1.2 MB)</a>
+<div class="card-meta">Link verified 12 Aug 2026</div>
+</div>
+</div>
+
+<div id="1a-quote" style="padding:70px 64px 0">
+<div style="height:3px;background:var(--color-text);margin-bottom:30px"></div>
+<div style="display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start">
+<div>
+<h2 style="font:600 40px/1.06 var(--font-heading);margin:0 0 14px;max-width:16em">Tell us the column you need.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:32em">Resin, diameter, bed height — that's usually enough for us to quote. If you'd rather talk it through first, say so in the notes and we'll call.</p>
+<p style="font-size:15px;line-height:1.6;max-width:32em;color:color-mix(in srgb,var(--color-text) 65%,transparent)">We answer quotes within one business day, in the US, from the people who pack the column.</p>
+</div>
+<sc-if value="{{ sent1a }}" hint-placeholder-val="{{ false }}">
+<div style="background:var(--color-surface);padding:34px">
+<h3 style="margin:0 0 8px">Thanks — that's with us.</h3>
+<p style="font-size:16px;margin:0">You'll hear back within one business day. If it's urgent, reply to the confirmation email and it goes straight to the packing bench.</p>
+</div>
+</sc-if>
+<sc-if value="{{ unsent1a }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit1a }}" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="field"><label>Name</label><input class="input" placeholder="Dana Okafor"></div>
+<div class="field"><label>Work email</label><input class="input" type="email" placeholder="dana@company.com"></div>
+<div class="field"><label>Company</label><input class="input" placeholder="Institution or company"></div>
+<div class="field"><label>Resin</label><input class="input" placeholder="e.g. MabSelect PrismA"></div>
+<div class="field"><label>Column i.d.</label><select class="input"><option>3 mm</option><option>5 mm</option><option selected="selected">10 mm</option><option>15 mm</option><option>25 mm</option><option>35 mm</option><option>50 mm</option></select></div>
+<div class="field"><label>Bed height (mm)</label><input class="input" placeholder="250"></div>
+<div class="field" style="grid-column:1/-1"><label>Anything else we should know</label><textarea class="input" placeholder="Method, deadline, whether you already own the hardware"></textarea></div>
+<div style="grid-column:1/-1;display:flex;gap:14px;align-items:center">
+<button class="btn btn-primary" type="submit" style="font-size:16px;padding:13px 22px">Request a quote</button>
+<span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 60%,transparent)">Not ready? <a href="#1a">Get the resin compatibility guide</a> instead.</span>
+</div>
+</form>
+</sc-if>
+</div>
+</div>
+
+<footer style="margin-top:76px;padding:34px 64px 40px;border-top:1px solid var(--color-divider);display:flex;gap:60px;align-items:flex-start">
+<div style="max-width:24em">
+<div style="font:600 19px/1 var(--font-heading);margin-bottom:8px">Argento Scientific</div>
+<p style="font-size:14px;line-height:1.6;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent)">Bench-scale column hardware, column packing, solvent waste safety and accessories.</p>
+</div>
+<div style="display:flex;gap:52px;margin-left:auto;font-size:14px;line-height:2">
+<div><div class="kicker" style="margin-bottom:6px">Columns</div><a href="#1a" style="display:block">Overview</a><a href="#1a" style="display:block">Column Swap</a><a href="#1a" style="display:block">Spec table</a></div>
+<div><div class="kicker" style="margin-bottom:6px">Solvent Safety</div><a href="#1a" style="display:block">Solvent Sentry™</a><a href="#1a" style="display:block">Accessories</a></div>
+<div><div class="kicker" style="margin-bottom:6px">Company</div><a href="#1a" style="display:block">About</a><a href="#1a" style="display:block">Contact</a></div>
+</div>
+</footer>
+<div style="padding:0 64px 30px;font-size:12.5px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">© 2026 Argento Scientific. All rights reserved.</div>
+
+<sc-if value="{{ stickyQuoteBar }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;bottom:0;background:var(--color-text);color:var(--color-bg);padding:14px 64px;display:flex;align-items:center;gap:20px">
+<span style="font:600 17px/1.2 var(--font-heading)">Ready-to-run columns, packed to your spec in about a week.</span>
+<a class="btn btn-primary" href="#1a-quote" style="margin-left:auto">Request a column quote</a>
+<a class="btn" href="#1a" style="color:var(--color-accent-300);border-color:color-mix(in srgb,#f3f2f2 30%,transparent)">Solvent Sentry™</a>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Two doors — persona routing above the fold, full product range</div>
+<div class="dv-card">
+<div class="frame">
+
+<header style="position:sticky;top:0;z-index:30;background:var(--color-bg);padding:0 64px;box-shadow:0 1px 0 var(--color-divider)">
+<div style="display:flex;align-items:center;gap:30px;padding:16px 0">
+<a href="#1b" style="font:600 22px/1 var(--font-heading);letter-spacing:-.02em;color:var(--color-text);text-decoration:none">Argento Scientific</a>
+<nav style="display:flex;gap:24px;align-items:center;margin-left:auto">
+<div style="position:relative" onMouseEnter="{{ open1bCols }}" onMouseLeave="{{ close1b }}">
+<span class="navtrig">Chromatography columns <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m1bCols }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:12px;min-width:300px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);padding:14px 16px">
+<div class="kicker" style="margin-bottom:8px">For the bench</div>
+<a class="menu-link" href="#1b">Columns overview</a>
+<a class="menu-link" href="#1b">Column Swap Program</a>
+<div class="kicker" style="margin:12px 0 8px">For the spec sheet</div>
+<a class="menu-link" href="#1b">Bed height &amp; volume table</a>
+<a class="menu-link" href="#1b">Resin coverage</a>
+</div></div>
+</sc-if>
+</div>
+<div style="position:relative" onMouseEnter="{{ open1bSolv }}" onMouseLeave="{{ close1b }}">
+<span class="navtrig">Solvent Safety <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m1bSolv }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-16px;padding-top:12px;min-width:300px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);padding:14px 16px">
+<a class="menu-link" href="#1b">Solvent Sentry™</a>
+<a class="menu-link" href="#1b">Emissions control</a>
+<a class="menu-link" href="#1b">Waste collection &amp; closed systems</a>
+</div></div>
+</sc-if>
+</div>
+<a href="#1b" style="font-size:15px;color:var(--color-text);text-decoration:none">About</a>
+<a class="btn btn-ghost" href="#1b">Learn about Solvent Sentry™</a>
+<a class="btn btn-primary" href="#1b-quote">Request a column quote</a>
+</nav>
+</div>
+</header>
+
+<div style="padding:56px 64px 0;text-align:left">
+<span class="kicker">Argento Scientific · Downstream process development</span>
+<h1 style="font:600 66px/1.02 var(--font-heading);letter-spacing:-.03em;margin:14px 0 18px;max-width:20em">Stop packing columns.<br>Get back to the real science.</h1>
+<p style="font-size:20px;line-height:1.5;max-width:44em;margin:0">Columns built and packed to your exact specification and shipped in days — plus the solvent safety hardware that keeps the rest of the lab out of trouble. Two product lines; pick the one you came for.</p>
+</div>
+
+<div style="padding:38px 64px 0;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-divider)">
+<div style="background:var(--color-bg);padding:32px 34px 34px;display:flex;flex-direction:column;gap:14px" style-hover="background:var(--color-accent-100)">
+<span class="kicker" style="color:var(--color-accent-700)">Door one · Chromatography columns</span>
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:0">Ready-to-run, tested, in about a week</h2>
+<p style="font-size:16.5px;line-height:1.6;margin:0">3–50 mm diameters, bed heights to 500 mm, 30+ resins packed routinely, FIFO traceability and lot certification on every column.</p>
+<figure class="cmyk" style="margin-top:6px"><div class="print" style="aspect-ratio:16/9;filter:none"><image-slot id="b-col" shape="rect" placeholder="Column hardware, landscape"></image-slot></div></figure>
+<div style="display:flex;gap:12px;margin-top:6px">
+<a class="btn btn-primary" href="#1b-quote">Request a column quote</a>
+<a class="btn btn-secondary" href="#1b">Columns overview</a>
+</div>
+</div>
+<div style="background:var(--color-bg);padding:32px 34px 34px;display:flex;flex-direction:column;gap:14px">
+<span class="kicker" style="color:var(--color-accent-2-700)">Door two · Solvent Safety</span>
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:0">Know the carboy is full before it overflows</h2>
+<p style="font-size:16.5px;line-height:1.6;margin:0">Solvent Sentry™ pairs a float switch with a 100 ft wireless bridge and a multi-alert system, in polypropylene built for solvent service.</p>
+<figure class="cmyk" style="margin-top:6px"><div class="print" style="aspect-ratio:16/9;filter:none"><image-slot id="b-solv" shape="rect" placeholder="Solvent Sentry™ on a waste carboy"></image-slot></div></figure>
+<div style="display:flex;gap:12px;margin-top:6px">
+<a class="btn btn-primary" href="#1b" style="background:var(--color-accent-2-600)">Learn about Solvent Sentry™</a>
+<a class="btn btn-secondary" href="#1b">Safety systems</a>
+</div>
+</div>
+</div>
+
+<div style="padding:44px 64px 0">
+<div style="display:flex;align-items:center;gap:30px;background:var(--color-surface);padding:22px 26px">
+<sc-if value="{{ proofClaim }}" hint-placeholder-val="{{ false }}">
+<p style="margin:0;font:600 21px/1.3 var(--font-heading);max-width:18em">Trusted by downstream teams at three of the top ten global biopharma companies.</p>
+</sc-if>
+<sc-if value="{{ proofLogos }}" hint-placeholder-val="{{ true }}">
+<span class="kicker" style="max-width:9em">Word of mouth, from teams at</span>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;flex:1">
+<div style="height:56px;display:grid;place-items:center;background:var(--color-bg);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:56px;display:grid;place-items:center;background:var(--color-bg);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:56px;display:grid;place-items:center;background:var(--color-bg);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:56px;display:grid;place-items:center;background:var(--color-bg);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+<div style="height:56px;display:grid;place-items:center;background:var(--color-bg);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:6px">Logo — pending approval</div>
+</div>
+<span class="tag tag-accent-2" style="flex:none">Awaiting Adrian</span>
+</sc-if>
+</div>
+</div>
+
+<div style="padding:56px 64px 0;display:grid;grid-template-columns:1fr 400px;gap:52px;align-items:start">
+<div>
+<span class="kicker" style="color:var(--color-accent-700)">Column Swap Program</span>
+<h2 style="font:600 40px/1.06 var(--font-heading);margin:10px 0 14px;max-width:20em">Send the hardware you already own. Get it back packed.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:36em">No new hardware, no method change. We repack your columns with full FIFO resin traceability and lot certification, in the US, and ship them back in about a week.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:26px 0 22px">
+<div><div style="font:600 15px/1 var(--font-heading);color:var(--color-accent-700)">01</div><div style="font-size:15.5px;line-height:1.55;margin-top:8px">Tell us your resin, diameter and bed height.</div></div>
+<div><div style="font:600 15px/1 var(--font-heading);color:var(--color-accent-700)">02</div><div style="font-size:15.5px;line-height:1.55;margin-top:8px">Ship us the hardware — we send the label.</div></div>
+<div><div style="font:600 15px/1 var(--font-heading);color:var(--color-accent-700)">03</div><div style="font-size:15.5px;line-height:1.55;margin-top:8px">It comes back packed, tested and certified.</div></div>
+</div>
+<div style="display:flex;gap:12px"><a class="btn btn-primary" href="#1b">See the Column Swap Program</a><a class="btn btn-secondary" href="#1b">Download the one-pager</a></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px;background:var(--color-divider)">
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<div style="background:var(--color-accent-100);padding:20px 22px">
+<div class="kicker" style="color:var(--color-accent-800)">Cost framing</div>
+<p style="margin:8px 0 0;font-size:16.5px;line-height:1.5">After the initial hardware purchase, <strong>you only pay to pack</strong> — an operating cost your lab manager can approve without a capital request.</p>
+</div>
+</sc-if>
+<div style="background:var(--color-bg);padding:16px 22px;font-size:15.5px">1-week typical turnaround</div>
+<div style="background:var(--color-bg);padding:16px 22px;font-size:15.5px">3–50 mm inner diameters</div>
+<div style="background:var(--color-bg);padding:16px 22px;font-size:15.5px">0–500 mm bed heights</div>
+<div style="background:var(--color-bg);padding:16px 22px;font-size:15.5px">FIFO resin traceability</div>
+<div style="background:var(--color-bg);padding:16px 22px;font-size:15.5px">Lot certification, every pack</div>
+<div style="background:var(--color-bg);padding:16px 22px;font-size:15.5px">Packed in the US</div>
+</div>
+</div>
+
+<div style="padding:60px 64px 0">
+<div style="display:flex;align-items:baseline;gap:16px;margin-bottom:16px">
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:0">Bed height &amp; volume, in HTML</h2>
+<span class="kicker">7 diameters · millilitres</span>
+</div>
+<table class="table" style="font-size:14.5px">
+<thead><tr><th>Bed height</th><th>3 mm</th><th>5 mm</th><th>10 mm</th><th>15 mm</th><th>25 mm</th><th>35 mm</th><th>50 mm</th></tr></thead>
+<tbody>
+<sc-for list="{{ specRows }}" as="r" hint-placeholder-count="6">
+<tr><td style="font-weight:600">{{ r.h }}</td><td>{{ r.v3 }}</td><td>{{ r.v5 }}</td><td>{{ r.v10 }}</td><td>{{ r.v15 }}</td><td>{{ r.v25 }}</td><td>{{ r.v35 }}</td><td>{{ r.v50 }}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div style="padding:60px 64px 0">
+<h2 style="font:600 34px/1.1 var(--font-heading);margin:0 0 6px">The whole range</h2>
+<p style="font-size:16px;margin:0 0 22px;max-width:44em">Most people arrive for columns. If you run the lab, there is more here than that.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--color-divider)">
+<div class="card" style="border-radius:0;background:var(--color-bg);padding:22px"><span class="card-kicker">Columns</span><div class="card-title">Bench-scale column hardware</div><p class="card-body">3–50 mm i.d., glass and stainless options, packed or empty.</p><a href="#1b" style="font-size:14px">Overview →</a></div>
+<div class="card" style="border-radius:0;background:var(--color-bg);padding:22px"><span class="card-kicker">Packing</span><div class="card-title">Column Swap Program</div><p class="card-body">Repacked to spec, FIFO traceability, back in a week.</p><a href="#1b" style="font-size:14px">How it works →</a></div>
+<div class="card" style="border-radius:0;background:var(--color-bg);padding:22px"><span class="card-kicker">Solvent safety</span><div class="card-title">Solvent Sentry™</div><p class="card-body">Float-switch level sensing with a 100 ft wireless bridge.</p><a href="#1b" style="font-size:14px">Product page →</a></div>
+<div class="card" style="border-radius:0;background:var(--color-bg);padding:22px"><span class="card-kicker">Storage</span><div class="card-title">VertiRack™</div><p class="card-body">Vertical column storage that keeps beds intact between runs.</p><a href="#1b" style="font-size:14px">Catalog →</a></div>
+<div class="card" style="border-radius:0;background:var(--color-bg);padding:22px"><span class="card-kicker">Accessories</span><div class="card-title">SeptaCaps™</div><p class="card-body">Septa caps for closed solvent transfer and sampling.</p><a href="#1b" style="font-size:14px">Catalog →</a></div>
+<div class="card" style="border-radius:0;background:var(--color-bg);padding:22px"><span class="card-kicker">Accessories</span><div class="card-title">Emissions &amp; waste handling</div><p class="card-body">Closed systems, waste collection and emissions control parts.</p><a href="#1b" style="font-size:14px">See the line →</a></div>
+</div>
+</div>
+
+<div id="1b-quote" style="padding:64px 64px 0;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start">
+<div>
+<h2 style="font:600 38px/1.06 var(--font-heading);margin:0 0 14px;max-width:16em">Two lines, two ways in.</h2>
+<p style="font-size:17px;line-height:1.6;max-width:32em">Quote a column below, or ask us about Solvent Sentry™ and we'll route it to the right person. Either way you hear back within one business day.</p>
+<a class="btn btn-secondary" href="#1b" style="margin-top:8px">Ask about Solvent Sentry™ instead</a>
+</div>
+<sc-if value="{{ sent1b }}" hint-placeholder-val="{{ false }}">
+<div style="background:var(--color-surface);padding:32px"><h3 style="margin:0 0 8px">Got it — thank you.</h3><p style="font-size:16px;margin:0">We'll be back within one business day with a quote and a lead time.</p></div>
+</sc-if>
+<sc-if value="{{ unsent1b }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit1b }}" style="background:var(--color-surface);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="field" style="grid-column:1/-1"><label>What are you asking about</label>
+<div class="seg" style="width:100%">
+<label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="b-line" defaultChecked="{{ true }}">Columns</label>
+<label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="b-line">Solvent Safety</label>
+</div></div>
+<div class="field"><label>Name</label><input class="input" placeholder="Dana Okafor"></div>
+<div class="field"><label>Work email</label><input class="input" type="email" placeholder="dana@company.com"></div>
+<div class="field"><label>Resin</label><input class="input" placeholder="e.g. Capto Q"></div>
+<div class="field"><label>Column i.d. × bed height</label><input class="input" placeholder="10 mm × 250 mm"></div>
+<div class="field" style="grid-column:1/-1"><label>Notes</label><textarea class="input" placeholder="Timeline, whether you own the hardware, anything unusual"></textarea></div>
+<button class="btn btn-primary" type="submit" style="grid-column:1/-1;font-size:16px;padding:13px 22px">Send it</button>
+</form>
+</sc-if>
+</div>
+
+<footer style="margin-top:70px;padding:32px 64px 40px;border-top:1px solid var(--color-divider);display:flex;gap:60px">
+<div style="max-width:22em"><div style="font:600 18px/1 var(--font-heading);margin-bottom:8px">Argento Scientific</div><p style="font-size:14px;line-height:1.6;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent)">Columns, packing, solvent waste safety and accessories for downstream process development.</p></div>
+<div style="display:flex;gap:52px;margin-left:auto;font-size:14px;line-height:2">
+<div><div class="kicker" style="margin-bottom:6px">Columns</div><a href="#1b" style="display:block">Overview</a><a href="#1b" style="display:block">Column Swap</a><a href="#1b" style="display:block">Spec table</a></div>
+<div><div class="kicker" style="margin-bottom:6px">Solvent Safety</div><a href="#1b" style="display:block">Solvent Sentry™</a><a href="#1b" style="display:block">Accessories</a></div>
+<div><div class="kicker" style="margin-bottom:6px">Company</div><a href="#1b" style="display:block">About</a><a href="#1b" style="display:block">Contact</a></div>
+</div>
+</footer>
+<div style="padding:0 64px 30px;font-size:12.5px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">© 2026 Argento Scientific. All rights reserved.</div>
+
+<sc-if value="{{ stickyQuoteBar }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;bottom:0;background:var(--color-bg);border-top:1px solid var(--color-text);padding:12px 64px;display:flex;align-items:center;gap:16px">
+<span style="font-size:15.5px">Columns packed to spec, shipped in about a week.</span>
+<a class="btn btn-primary" href="#1b-quote" style="margin-left:auto">Request a column quote</a>
+<a class="btn btn-secondary" href="#1b">Solvent Sentry™</a>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>The spec sheet — plate numerals, calculator, data above the fold</div>
+<div class="dv-card">
+<div class="frame">
+
+<header style="position:sticky;top:0;z-index:30;background:var(--color-bg);padding:0 56px">
+<div style="display:flex;align-items:center;gap:26px;padding:14px 0 12px;border-bottom:1px solid var(--color-text)">
+<a href="#1c" style="font:600 20px/1 var(--font-heading);letter-spacing:-.02em;color:var(--color-text);text-decoration:none">Argento Scientific</a>
+<nav style="display:flex;gap:22px;align-items:center;margin-left:20px">
+<div style="position:relative" onMouseEnter="{{ open1cCols }}" onMouseLeave="{{ close1c }}">
+<span class="navtrig" style="font-size:14.5px">Chromatography columns <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m1cCols }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-14px;padding-top:12px;min-width:290px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);padding:12px 14px">
+<a class="menu-link" href="#1c">Columns overview</a>
+<a class="menu-link" href="#1c">Column Swap Program</a>
+<a class="menu-link" href="#1c">Bed height &amp; volume table</a>
+<a class="menu-link" href="#1c">Resin coverage (30+)</a>
+</div></div>
+</sc-if>
+</div>
+<div style="position:relative" onMouseEnter="{{ open1cSolv }}" onMouseLeave="{{ close1c }}">
+<span class="navtrig" style="font-size:14.5px">Solvent Safety <span style="font-size:10px">▾</span></span>
+<sc-if value="{{ m1cSolv }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-14px;padding-top:12px;min-width:290px;z-index:40">
+<div style="background:var(--color-bg);box-shadow:var(--shadow-md);padding:12px 14px">
+<a class="menu-link" href="#1c">Solvent Sentry™</a>
+<a class="menu-link" href="#1c">Waste collection &amp; closed systems</a>
+</div></div>
+</sc-if>
+</div>
+<a href="#1c" style="font-size:14.5px;color:var(--color-text);text-decoration:none">About</a>
+</nav>
+<div style="display:flex;gap:10px;margin-left:auto">
+<a class="btn btn-ghost" href="#1c">Learn about Solvent Sentry™</a>
+<a class="btn btn-primary" href="#1c-quote">Request a column quote</a>
+</div>
+</div>
+</header>
+
+<div style="padding:52px 56px 0;display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:start">
+<div>
+<h1 style="font:600 60px/1.02 var(--font-heading);letter-spacing:-.03em;margin:0 0 18px;max-width:15em">Stop packing columns. Get back to the real science.</h1>
+<p style="font-size:19px;line-height:1.55;max-width:32em;margin:0 0 30px">Custom-built to exact specifications, shipped in days. Here are the numbers you were going to ask for anyway.</p>
+<div style="display:flex;gap:52px;flex-wrap:wrap">
+<div>
+<span class="cmyk-num" style="display:block;font:600 62px/0.9 var(--font-heading)"><span class="paper">1 wk</span><span class="plate plate-c" aria-hidden="true">1 wk</span><span class="plate plate-m" aria-hidden="true">1 wk</span><span class="plate plate-y" aria-hidden="true">1 wk</span></span>
+<div style="font-size:14.5px;margin-top:12px;max-width:9em">Typical turnaround, bench to bench</div>
+</div>
+<div>
+<span class="cmyk-num" style="display:block;font:600 62px/0.9 var(--font-heading)"><span class="paper">30+</span><span class="plate plate-c" aria-hidden="true">30+</span><span class="plate plate-m" aria-hidden="true">30+</span><span class="plate plate-y" aria-hidden="true">30+</span></span>
+<div style="font-size:14.5px;margin-top:12px;max-width:9em">Resins packed routinely</div>
+</div>
+<div>
+<span class="cmyk-num" style="display:block;font:600 62px/0.9 var(--font-heading)"><span class="paper">3–50</span><span class="plate plate-c" aria-hidden="true">3–50</span><span class="plate plate-m" aria-hidden="true">3–50</span><span class="plate plate-y" aria-hidden="true">3–50</span></span>
+<div style="font-size:14.5px;margin-top:12px;max-width:9em">Inner diameters, in millimetres</div>
+</div>
+</div>
+<div style="display:flex;gap:12px;margin-top:34px">
+<a class="btn btn-primary" href="#1c-quote" style="font-size:16px;padding:13px 22px">Request a column quote</a>
+<a class="btn btn-secondary" href="#1c" style="font-size:16px;padding:13px 22px">Download the one-pager</a>
+</div>
+</div>
+<div style="background:var(--color-surface);padding:26px 26px 28px">
+<div class="kicker" style="color:var(--color-accent-700)">Column volume calculator</div>
+<h3 style="font-size:22px;margin:10px 0 14px">Check your geometry before you ask</h3>
+<div class="kicker" style="margin-bottom:8px">Inner diameter</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px">
+<sc-for list="{{ diaChips }}" as="c" hint-placeholder-count="7">
+<button class="{{ c.cls }}" onClick="{{ c.on }}" style="cursor:pointer;font:inherit;font-size:13px;padding:5px 12px">{{ c.label }}</button>
+</sc-for>
+</div>
+<table class="table" style="font-size:14.5px">
+<thead><tr><th>Bed height</th><th>Column volume</th></tr></thead>
+<tbody>
+<sc-for list="{{ calcRows }}" as="r" hint-placeholder-count="6">
+<tr><td>{{ r.h }}</td><td style="font-weight:600">{{ r.v }} mL</td></tr>
+</sc-for>
+</tbody>
+</table>
+<p style="font-size:13.5px;line-height:1.5;margin:16px 0 0;color:color-mix(in srgb,var(--color-text) 65%,transparent)">Bed heights from 0 to 500 mm. Anything between these steps, we'll pack to the millimetre.</p>
+</div>
+</div>
+
+<div style="padding:46px 56px 0">
+<div style="display:flex;align-items:center;gap:26px;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:20px 0">
+<sc-if value="{{ proofClaim }}" hint-placeholder-val="{{ false }}">
+<p style="margin:0;font:600 20px/1.3 var(--font-heading);max-width:20em">Trusted by downstream teams at three of the top ten global biopharma companies.</p>
+</sc-if>
+<sc-if value="{{ proofLogos }}" hint-placeholder-val="{{ true }}">
+<span class="kicker" style="max-width:10em">Specified by teams at</span>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1">
+<div style="height:50px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:4px">Logo — pending approval</div>
+<div style="height:50px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:4px">Logo — pending approval</div>
+<div style="height:50px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:4px">Logo — pending approval</div>
+<div style="height:50px;display:grid;place-items:center;background:var(--color-neutral-200);color:var(--color-neutral-600);font-size:11px;text-align:center;padding:4px">Logo — pending approval</div>
+</div>
+<span class="tag tag-accent-2" style="flex:none">Awaiting Adrian</span>
+</sc-if>
+</div>
+</div>
+
+<div style="padding:52px 56px 0">
+<div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px">
+<h2 style="font:600 32px/1.1 var(--font-heading);margin:0">Full bed height &amp; volume table</h2>
+<span class="kicker">Live HTML · 7 diameters</span>
+</div>
+<table class="table" style="font-size:14.5px">
+<thead><tr><th>Bed height</th><th>3 mm</th><th>5 mm</th><th>10 mm</th><th>15 mm</th><th>25 mm</th><th>35 mm</th><th>50 mm</th></tr></thead>
+<tbody>
+<sc-for list="{{ specRows }}" as="r" hint-placeholder-count="6">
+<tr><td style="font-weight:600">{{ r.h }}</td><td>{{ r.v3 }}</td><td>{{ r.v5 }}</td><td>{{ r.v10 }}</td><td>{{ r.v15 }}</td><td>{{ r.v25 }}</td><td>{{ r.v35 }}</td><td>{{ r.v50 }}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<div style="padding:52px 56px 0;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start">
+<div>
+<div style="display:flex;align-items:baseline;gap:14px"><h2 style="font:600 32px/1.1 var(--font-heading);margin:0 0 8px">Resin coverage</h2><span class="kicker">Partial list</span></div>
+<p style="font-size:16px;max-width:42em;margin:0 0 18px">From Cytiva, Tosoh, Bio-Rad, Thermo Fisher and Merck KGaA — grouped by chemistry, in text, so you can find it from a search box.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-divider)">
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker" style="color:var(--color-accent-700)">Protein A</div><div style="font-size:15px;line-height:1.7;margin-top:6px">MabSelect PrismA · MabSelect SuRe LX · MabSelect</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker" style="color:var(--color-accent-700)">Ion exchange</div><div style="font-size:15px;line-height:1.7;margin-top:6px">Capto Q · Fractogel TMAE · Toyopearl GigaCap Q</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker" style="color:var(--color-accent-700)">Hydrophobic interaction</div><div style="font-size:15px;line-height:1.7;margin-top:6px">Toyopearl Phenyl-650 · Butyl-600 · Capto Phenyl</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker" style="color:var(--color-accent-700)">Size exclusion</div><div style="font-size:15px;line-height:1.7;margin-top:6px">Superdex 200 · Sephacryl S-400</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker" style="color:var(--color-accent-700)">Affinity — AAV</div><div style="font-size:15px;line-height:1.7;margin-top:6px">POROS AAV9 · POROS AAVX</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker" style="color:var(--color-accent-700)">Mixed mode</div><div style="font-size:15px;line-height:1.7;margin-top:6px">Capto MMC · Toyopearl MX-Trp-650M</div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div class="card" style="padding:20px">
+<span class="card-kicker">Column Swap Program</span>
+<div class="card-title" style="font-size:19px">Repack the hardware you own</div>
+<p class="card-body" style="font-size:14px">1-week turnaround · 0–500 mm bed heights · FIFO resin traceability · lot certification · packed in the US.</p>
+<sc-if value="{{ showPricing }}" hint-placeholder-val="{{ true }}">
+<p class="card-body" style="font-size:14px"><strong>You only pay to pack</strong> after the initial hardware purchase.</p>
+</sc-if>
+<a class="btn btn-primary btn-block" href="#1c">See how the swap works</a>
+</div>
+<div class="card" style="padding:20px">
+<span class="card-kicker">Forwardable</span>
+<div class="card-title" style="font-size:19px">Column line one-pager</div>
+<p class="card-body" style="font-size:14px">Clean two-page PDF for a lab manager or procurement contact.</p>
+<a class="btn btn-secondary btn-block" href="#1c">Download PDF (1.2 MB)</a>
+<div class="card-meta">Link verified 12 Aug 2026</div>
+</div>
+</div>
+</div>
+
+<div style="padding:56px 0 0">
+<figure class="cmyk" style="width:100%">
+<div class="print" style="height:340px;filter:none">
+<image-slot id="c-bleed" shape="rect" placeholder="Full-bleed lab bench photograph"></image-slot>
+</div>
+</figure>
+</div>
+
+<div style="padding:52px 56px 0;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+<div>
+<span class="kicker" style="color:var(--color-accent-2-700)">Solvent Safety</span>
+<h2 style="font:600 32px/1.1 var(--font-heading);margin:10px 0 12px;max-width:20em">Solvent Sentry™, in plain language</h2>
+<p style="font-size:16.5px;line-height:1.6;max-width:34em">A float switch in the waste carboy senses the level. A wireless bridge — up to 100 ft — carries the signal out of the fume hood. A multi-alert system tells whoever is nearby before the container overflows. Polypropylene throughout, for solvent service.</p>
+<div style="display:flex;gap:12px;margin-top:18px"><a class="btn btn-primary" href="#1c" style="background:var(--color-accent-2-600)">Solvent Sentry™ product page</a></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-divider)">
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker">Sensing</div><div style="font-size:15.5px;margin-top:6px">Float switch, in-carboy</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker">Wireless range</div><div style="font-size:15.5px;margin-top:6px">Up to 100 ft to bridge</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker">Alerts</div><div style="font-size:15.5px;margin-top:6px">Multi-alert, local and remote</div></div>
+<div style="background:var(--color-bg);padding:16px 18px"><div class="kicker">Construction</div><div style="font-size:15.5px;margin-top:6px">Polypropylene</div></div>
+</div>
+</div>
+
+<div id="1c-quote" style="padding:60px 56px 0">
+<div style="background:var(--color-surface);padding:34px 36px;display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start">
+<div>
+<h2 style="font:600 34px/1.06 var(--font-heading);margin:0 0 12px;max-width:15em">You've seen the specs. Tell us the column.</h2>
+<p style="font-size:16.5px;line-height:1.6;max-width:30em;margin:0">Resin, diameter, bed height. One business day to a quote, from the people who pack it.</p>
+</div>
+<sc-if value="{{ sent1c }}" hint-placeholder-val="{{ false }}">
+<div><h3 style="margin:0 0 8px">Thanks — that's with the packing bench.</h3><p style="font-size:16px;margin:0">You'll have a quote within one business day.</p></div>
+</sc-if>
+<sc-if value="{{ unsent1c }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit1c }}" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div class="field"><label>Name</label><input class="input" placeholder="Dana Okafor"></div>
+<div class="field"><label>Work email</label><input class="input" type="email" placeholder="dana@company.com"></div>
+<div class="field"><label>Resin</label><input class="input" placeholder="e.g. POROS AAVX"></div>
+<div class="field"><label>Column i.d. × bed height</label><input class="input" placeholder="10 mm × 250 mm"></div>
+<div class="field" style="grid-column:1/-1"><label>Notes</label><textarea class="input" placeholder="Method, deadline, hardware you already own"></textarea></div>
+<div style="grid-column:1/-1;display:flex;gap:14px;align-items:center"><button class="btn btn-primary" type="submit" style="font-size:16px;padding:13px 22px">Request a quote</button><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 60%,transparent)">Or <a href="#1c">get the column sizing guide</a>.</span></div>
+</form>
+</sc-if>
+</div>
+</div>
+
+<footer style="margin-top:64px;padding:30px 56px 36px;border-top:1px solid var(--color-divider);display:flex;gap:60px">
+<div style="max-width:22em"><div style="font:600 18px/1 var(--font-heading);margin-bottom:8px">Argento Scientific</div><p style="font-size:14px;line-height:1.6;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent)">Bench-scale columns, packing, and solvent waste safety.</p></div>
+<div style="display:flex;gap:48px;margin-left:auto;font-size:14px;line-height:2">
+<div><div class="kicker" style="margin-bottom:6px">Columns</div><a href="#1c" style="display:block">Overview</a><a href="#1c" style="display:block">Column Swap</a><a href="#1c" style="display:block">Spec table</a><a href="#1c" style="display:block">Resin coverage</a></div>
+<div><div class="kicker" style="margin-bottom:6px">Solvent Safety</div><a href="#1c" style="display:block">Solvent Sentry™</a><a href="#1c" style="display:block">Accessories</a></div>
+<div><div class="kicker" style="margin-bottom:6px">Company</div><a href="#1c" style="display:block">About</a><a href="#1c" style="display:block">Contact</a></div>
+</div>
+</footer>
+<div style="padding:0 56px 28px;font-size:12.5px;color:color-mix(in srgb,var(--color-text) 55%,transparent)">© 2026 Argento Scientific. All rights reserved.</div>
+
+<sc-if value="{{ stickyQuoteBar }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;bottom:0;background:var(--color-text);color:var(--color-bg);padding:12px 56px;display:flex;align-items:center;gap:18px">
+<span style="font-size:15.5px">Diameter, bed height, resin — that's all a quote needs.</span>
+<a class="btn btn-primary" href="#1c-quote" style="margin-left:auto">Request a column quote</a>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "take <a class="dv-oid" href="#1a">1a</a>'s plate headline into <a class="dv-oid" href="#1c">1c</a>" · "make <a class="dv-oid" href="#1b">1b</a>'s two doors full-bleed" · "add the mobile view for whichever you like"</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;socialProof&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Placeholder logo row&quot;,&quot;Anonymized claim line&quot;,&quot;Both&quot;],&quot;default&quot;:&quot;Placeholder logo row&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showPricing&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;stickyQuoteBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+class Component extends DCLogic {
+  state = { menu: null, sent: {}, dia: 10 };
+
+  vol(d, h) {
+    const v = Math.PI * Math.pow(d / 2, 2) * h / 1000;
+    return v < 10 ? v.toFixed(2) : v < 100 ? v.toFixed(1) : Math.round(v);
+  }
+
+  renderVals() {
+    const v = {};
+    const heights = [50, 100, 150, 200, 250, 300, 400, 500];
+    v.specRows = heights.map(h => {
+      const r = { h: h + ' mm' };
+      [3, 5, 10, 15, 25, 35, 50].forEach(d => { r['v' + d] = this.vol(d, h); });
+      return r;
+    });
+
+    const dia = this.state.dia;
+    v.calcRows = [50, 100, 150, 200, 250, 300].map(h => ({ h: h + ' mm', v: this.vol(dia, h) }));
+    v.diaChips = [3, 5, 10, 15, 25, 35, 50].map(d => ({
+      label: d + ' mm',
+      cls: 'tag ' + (d === dia ? 'tag-accent' : 'tag-outline'),
+      on: () => this.setState({ dia: d })
+    }));
+
+    ['1a', '1b', '1c', '2a', '2b'].forEach(id => {
+      ['Cols', 'Solv', 'About'].forEach(k => {
+        v['m' + id + k] = this.state.menu === id + k;
+        v['open' + id + k] = () => this.setState({ menu: id + k });
+      });
+      v['close' + id] = () => this.setState({ menu: null });
+      const sent = !!this.state.sent[id];
+      v['sent' + id] = sent;
+      v['unsent' + id] = !sent;
+      v['submit' + id] = e => {
+        e.preventDefault();
+        this.setState(s => ({ sent: Object.assign({}, s.sent, { [id]: true }) }));
+      };
+    });
+
+    v.quoteOpen = !!this.state.quoteOpen;
+    v.quoteSent = !!this.state.quoteSent;
+    v.quoteUnsent = !this.state.quoteSent;
+    v.openQuote = () => this.setState({ quoteOpen: true, quoteSent: false, menu: null });
+    v.closeQuote = () => this.setState({ quoteOpen: false });
+    v.stopClick = e => e.stopPropagation();
+    v.submitQuote = e => { e.preventDefault(); this.setState({ quoteSent: true }); };
+
+    const proof = this.props.socialProof ?? 'Placeholder logo row';
+    v.proofLogos = proof !== 'Anonymized claim line';
+    v.proofClaim = proof !== 'Placeholder logo row';
+    v.showPricing = this.props.showPricing ?? true;
+    v.stickyQuoteBar = this.props.stickyQuoteBar ?? true;
+    return v;
+  }
+}
+
+</script>
+</body>
+</html>
