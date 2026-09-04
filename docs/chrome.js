@@ -30,7 +30,6 @@
       key: 'services', label: 'Column Services', minWidth: 250,
       links: [
         { label: 'Custom Column Packing', href: '#' },
-        { label: 'Column Request', href: '#' },
         { label: 'Column Swap Program', href: BASE + 'index.html#swap' },
         { label: 'Resin &amp; Spec Library', href: '#' }
       ]
@@ -110,7 +109,6 @@
   const FOOTER_COLUMNS = [
     { title: 'Column Services', links: [
       { label: 'Custom Column Packing', href: '#' },
-      { label: 'Column Request', href: '#' },
       { label: 'Column Swap Program', href: BASE + 'index.html#swap' },
       { label: 'Resin &amp; Spec Library', href: '#' }
     ] },
