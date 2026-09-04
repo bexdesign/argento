@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SeptaCaps — Argento Scientific</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../common.css">
+<link rel="stylesheet" href="../shop.css">
+<link rel="stylesheet" href="../product.css">
+<script>
+  window.SITE_BASE = '../../';
+  window.PRODUCT_HANDLE = 'septacaps-50-ml-centrifuge-vials';
+</script>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div id="product-root"></div>
+
+<div id="site-footer"></div>
+
+<script src="../products-data.js"></script>
+<script>
+  // Set the footer's per-page trademark note before chrome.js renders it.
+  (function () {
+    var product = window.ArgentoProducts.byHandle(window.PRODUCT_HANDLE);
+    if (product) document.getElementById('site-footer').setAttribute('data-note', window.ArgentoProducts.trademarkNote(product));
+  })();
+</script>
+<script src="../../chrome.js"></script>
+<script src="../product.js"></script>
+</body>
+</html>

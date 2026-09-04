@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SeptaCaps — Argento Scientific</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="collection.css">
+<script>window.SITE_BASE = '../';</script>
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="sc-hero">
+  <div class="sc-hero-bg"></div>
+  <div class="sc-hero-edge"></div>
+  <div class="sc-hero-copy">
+    <span class="kicker">Solvent safety · SeptaCaps™</span>
+    <h1>Keep the fluids in and <em>the contaminants out.</em></h1>
+    <p class="lede">A quick, easy way to secure tubing while reducing contamination and evaporation — a self-sealing septum instead of a ported cap you screw in every time, or a wrap of stretchy film.</p>
+    <div class="sc-hero-stats">
+      <span>9 products</span><span>22 variants</span><span>18–54 mm</span><span>EPDM septa</span><span>Priced by quote</span>
+    </div>
+  </div>
+  <div class="sc-hero-plate">
+    <img class="pimg" src="../assets/argento-scientific-septacaps-catalog-nov-mtnalprw-iwv9.png" alt="A SeptaCap on a GL45 bottle with tubing passing through the septum">
+  </div>
+</section>
+
+<section class="why-septum">
+  <div>
+    <span class="kicker">Why a septum</span>
+    <h2>Ported caps cost time. Film wraps cost consistency.</h2>
+    <p>Traditional methods for securing tubing in a bottle mean screwing in a ported cap each time, or wrapping everything in stretchy film — an approach that is inconsistent, leaves gaps particularly once tubes are added or removed, and can let bits of film fall into the bottle along with other airborne contaminants.</p>
+    <p>SeptaCaps replaces both with a self-sealing septum that holds tubing or sampling needles in place without cap adjustments or makeshift wraps.</p>
+  </div>
+  <div class="why-septum-list">
+    <div><div class="title">Quick installation</div><p>Push the tube through the septum. No cap adjustment, no re-wrap when a line is added or pulled.</p></div>
+    <div><div class="title">Reduced contamination and evaporation</div><p>The septum closes around what passes through it, so the headspace stays sealed between interventions.</p></div>
+    <div><div class="title">Rugged design for repeated use</div><p>EPDM septa in a threaded cap built to go back on the same bottle, run after run.</p></div>
+  </div>
+</section>
+
+<div class="section-head">
+  <div class="section-head-inner">
+    <h2>Shop by thread</h2>
+    <span class="note">Measure the bottle thread, then match the range.</span>
+    <div class="sort-control">
+      <span class="kicker">Sort</span>
+      <select class="sortsel" id="sort-select">
+        <option value="thread">Thread, small to large</option>
+        <option value="title">Title, A–Z</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="shop-body">
+  <div class="filter-rail">
+    <div class="filter-rail-head">
+      <span class="kicker">Filter</span>
+      <button class="clear-all" id="clear-filters" type="button">Clear all</button>
+    </div>
+    <div id="filter-groups"></div>
+    <div class="fit-help">
+      <div class="kicker">Not sure of the thread?</div>
+      <p>Send us the bottle make and a caliper reading across the thread and we will name the cap.</p>
+      <button class="btn-ghost" id="open-help" type="button">Ask about a fit</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="results-head">
+      <span class="count"><span class="mono" id="shown-count">9</span> products · <span class="mono" id="shown-variants">22</span> variants match</span>
+      <span class="summary" id="filter-summary">Whole collection</span>
+    </div>
+    <div class="results-grid" id="results-grid"></div>
+    <div class="empty-state" id="empty-state" hidden>
+      <h3>No cap matches that combination</h3>
+      <p>Falcon® and generic profiles only exist on the centrifuge lines, and the bottle caps only come cross-cut or multi-cut. Clear a filter, or ask us about the fit.</p>
+      <button class="btn-ghost" id="clear-filters-empty" type="button">Clear filters</button>
+    </div>
+  </div>
+</div>
+
+<section class="beyond-nominal">
+  <div class="beyond-nominal-panel">
+    <div class="beyond-nominal-bg"></div>
+    <div class="beyond-nominal-inner">
+      <div>
+        <span class="kicker">Beyond the nominal thread</span>
+        <h3>One cap often covers more bottles than its name suggests</h3>
+        <p>The GL45 SeptaCap is also listed as compatible with Corning® Easy Grip and Nalgene™ Rapid-Flow 45 mm bottles. Three separate 38 mm families — Wako®/Cubitainer®, 38-430 glass and 38-430 plastic — all measure 36.8–37.5 mm across, and the two 48 mm threads both measure 45–46 mm, so read the bottle, not the caliper alone.</p>
+        <a href="septacaps-48mm-corning-roller-bottles/index.html">See the 48 mm Corning® page →</a>
+      </div>
+      <div class="beyond-nominal-list">
+        <div><div class="title">Cap only, or vial and cap</div><p>The centrifuge lines ship either way — a vial with a SeptaCap fitted, or a replacement cap for vials you already own.</p></div>
+        <div><div class="title">Falcon® or generic</div><p>Centrifuge caps come in a Falcon® profile and a generic profile — the <span class="mono">F</span> in the part number marks the Falcon® version.</p></div>
+        <div><div class="title">Non-sterile</div><p>All centrifuge vial and cap assemblies ship non-sterile.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer" data-note="Nalgene™ and Biotainer™ are trademarks of Thermo Fisher Scientific. Corning® is a registered trademark of Corning Incorporated. Falcon® is a registered trademark of Corning Incorporated. Wako® is a registered trademark of Fujifilm Wako Pure Chemical Corporation. Cubitainer® is a registered trademark of Hedwin Corporation. © 2026 Argento Scientific."></div>
+
+<div class="modal-scrim" id="help-scrim">
+  <div class="modal-box narrow" role="dialog" aria-modal="true" aria-labelledby="help-title">
+    <div class="modal-head">
+      <div>
+        <span class="kicker">Thread match</span>
+        <h3 id="help-title">Tell us the bottle.</h3>
+      </div>
+      <button type="button" class="modal-close" aria-label="Close" id="help-close">✕</button>
+    </div>
+    <div class="modal-form-wrap">
+      <p class="intro">Make, model and a caliper reading across the thread is usually enough. We answer within one business day.</p>
+      <form id="help-form">
+        <div class="field"><label>Work email</label><input class="input" type="email" placeholder="dana@company.com"></div>
+        <div class="field"><label>Thread diameter</label><input class="input" placeholder="45.6 mm"></div>
+        <div class="field full"><label>Bottle make and model</label><input class="input" placeholder="Corning® 490 cm² roller bottle"></div>
+        <button class="btn-signal" type="submit">Ask about a fit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../chrome.js"></script>
+<script src="products-data.js"></script>
+<script src="collection.js"></script>
+</body>
+</html>

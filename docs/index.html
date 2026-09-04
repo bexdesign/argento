@@ -7,60 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
 <link rel="stylesheet" href="styles.css">
+<script>window.SITE_BASE = '';</script>
 </head>
 <body>
 
-<header>
-  <div class="header-row">
-    <a href="/" class="logo"><img src="assets/argento-logo.png" alt="Argento Scientific"></a>
-    <nav class="main-nav">
-
-      <div class="nav-item" data-nav="columns">
-        <button class="navtrig" type="button">Chromatography columns <span style="font-size:10px">▾</span></button>
-        <div class="nav-dropdown">
-          <div class="nav-dropdown-inner">
-            <a class="menu-link" href="#">Chromatography columns</a>
-            <a class="menu-link" href="#swap">Column swap program</a>
-            <a class="menu-link" href="#">Column storage &amp; handling</a>
-            <a class="menu-link" href="#">Column accessories</a>
-            <a class="menu-link" href="#">Resin &amp; spec library</a>
-            <a class="menu-link" href="#">Fittings &amp; tubing assemblies <span style="color:var(--color-accent-700)">†</span></a>
-            <div class="nav-footnote">† One page, cross-listed under Solvent safety.</div>
-            <button type="button" class="btn-signal" data-open-quote>Request a column quote</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-item" data-nav="solvent">
-        <button class="navtrig" type="button">Solvent safety <span style="font-size:10px">▾</span></button>
-        <div class="nav-dropdown">
-          <div class="nav-dropdown-inner">
-            <a class="menu-link" href="#solvent-safety">Overflow monitoring &amp; sensors</a>
-            <a class="menu-link" href="#solvent-safety">Tube &amp; vial caps</a>
-            <a class="menu-link" href="#solvent-safety">Solvent extraction systems</a>
-            <a class="menu-link" href="#solvent-safety">Waste collection systems</a>
-            <a class="menu-link" href="#">Fittings &amp; tubing assemblies <span style="color:var(--color-accent-700)">†</span></a>
-            <div class="nav-footnote">† One page, cross-listed under Chromatography columns.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-item" data-nav="about">
-        <button class="navtrig" type="button">About <span style="font-size:10px">▾</span></button>
-        <div class="nav-dropdown" style="min-width:230px">
-          <div class="nav-dropdown-inner">
-            <a class="menu-link" href="#">Company overview</a>
-            <a class="menu-link" href="#">Contact</a>
-          </div>
-        </div>
-      </div>
-
-    </nav>
-  </div>
-  <div class="header-accent-line"></div>
-  <div class="header-utility-row"></div>
-</header>
+<div id="site-header"></div>
 
 <section class="hero">
   <div class="hero-bg"></div>
@@ -205,49 +158,14 @@
         <p>Closed carboy assemblies with vented caps, quick-connects and level indication.</p>
       </div>
       <div>
-        <div class="title">Tube &amp; vial caps · fittings &amp; tubing</div>
+        <a class="title" href="septacaps/index.html" style="display:block;text-decoration:none;color:inherit">Tube &amp; vial caps · fittings &amp; tubing</a>
         <p>The small parts that decide whether a system is actually sealed — matched to your ports.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-bg"></div>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="name">Argento Scientific</div>
-      <p>Bench-scale column hardware, column packing, solvent waste safety and accessories.</p>
-      <div class="address">100 Cummings Center, Suite 451-C<br>Beverly, MA 01915</div>
-    </div>
-    <div class="footer-links">
-      <div>
-        <div class="kicker">Chromatography columns</div>
-        <a href="#">Chromatography columns</a>
-        <a href="#swap">Column swap program</a>
-        <a href="#">Column storage &amp; handling</a>
-        <a href="#">Column accessories</a>
-        <a href="#">Resin &amp; spec library</a>
-        <a href="#">Fittings &amp; tubing assemblies †</a>
-      </div>
-      <div>
-        <div class="kicker">Solvent safety</div>
-        <a href="#solvent-safety">Overflow monitoring &amp; sensors</a>
-        <a href="#solvent-safety">Tube &amp; vial caps</a>
-        <a href="#solvent-safety">Solvent extraction systems</a>
-        <a href="#solvent-safety">Waste collection systems</a>
-        <a href="#">Fittings &amp; tubing assemblies †</a>
-      </div>
-      <div>
-        <div class="kicker">About</div>
-        <a href="#">Company overview</a>
-        <a href="#">Contact</a>
-        <div class="footnote">† One page, cross-listed in both sections.</div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">© 2026 Argento Scientific. All rights reserved.</div>
-</footer>
+<div id="site-footer"></div>
 
 <div class="sticky-bar">
   <span class="headline">Ready-to-run columns, packed to your spec in about a week.</span>
@@ -298,6 +216,7 @@
   </div>
 </div>
 
+<script src="chrome.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

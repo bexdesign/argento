@@ -1,22 +1,6 @@
-// Argento Scientific homepage — nav dropdowns + quote modal.
+// Argento Scientific homepage — "custom column quote" request modal.
+// Nav dropdowns and the shared header/footer are handled by chrome.js.
 (() => {
-  // Nav dropdowns: hover to open (mouse), click to toggle (keyboard/touch).
-  document.querySelectorAll('.nav-item').forEach((item) => {
-    const trigger = item.querySelector('.navtrig');
-    item.addEventListener('mouseenter', () => item.classList.add('open'));
-    item.addEventListener('mouseleave', () => item.classList.remove('open'));
-    trigger.addEventListener('click', () => {
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.nav-item.open').forEach((o) => o.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-item')) {
-      document.querySelectorAll('.nav-item.open').forEach((o) => o.classList.remove('open'));
-    }
-  });
-
   // Quote modal.
   const scrim = document.getElementById('quote-scrim');
   const sentPanel = document.getElementById('quote-sent');
